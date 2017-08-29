@@ -83,6 +83,15 @@
                     maxlength: '50',
                     sequenceNumber: 5
                 },
+                Remarks: {
+                    title: 'Remarks',
+                    edit: true,
+                    type: 'textarea',
+                    list: false,
+                    create: true,
+                    maxlength: '500',
+                    sequenceNumber: 6
+                },
             },
             formCreated: function (event, data) {
                 if (indexId == ' ') {

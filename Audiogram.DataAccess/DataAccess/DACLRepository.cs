@@ -127,6 +127,8 @@ namespace Audiogram.DataAccess
                 command.Parameters.AddWithValue("@Amount", DACL.Amount);
                 command.Parameters.AddWithValue("@CashLoan", DACL.CashLoan);
                 command.Parameters.AddWithValue("@TripId", DACL.TripId);
+                command.Parameters.AddWithValue("@Remarks", DACL.Remarks);
+
 
                 DataRow dataRow = dataTable.NewRow();
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
@@ -185,6 +187,8 @@ namespace Audiogram.DataAccess
                 command.Parameters.AddWithValue("@Qty_Ltr", DACL.Qty_Ltr);
                 command.Parameters.AddWithValue("@Amount", DACL.Amount);
                 command.Parameters.AddWithValue("@CashLoan", DACL.CashLoan);
+                command.Parameters.AddWithValue("@Remarks", DACL.Remarks);
+
 
                 DataRow dataRow = dataTable.NewRow();
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);

@@ -21,5 +21,7 @@ namespace Audiogram.DataAccess.Model
         public int CashLoan { get; set; }
 
         public int TripId { get; set; }
+
+        public string Remarks { get; set; }
     }
 }
