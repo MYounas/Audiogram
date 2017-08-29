@@ -1,0 +1,10 @@
+2017-04-16 16:21:56,600 INFO  Page Load of Login
+2017-04-16 16:21:59,383 INFO  Page Load of Login
+2017-04-16 16:22:00,684 INFO  Page Load of Master
+2017-04-16 16:22:06,523 INFO  Page Load of Master
+2017-04-16 16:22:08,515 INFO  Page Load of Master
+2017-04-16 16:22:08,566 INFO  Page Load of Master
+2017-04-16 16:22:09,163 ERROR error:Procedure or function usp_searchTrip has too many arguments specified.
+2017-04-16 16:22:09,579 ERROR error:Procedure or function usp_searchTrip has too many arguments specified.
+2017-04-16 16:22:09,629 ERROR error:Procedure or function usp_searchTrip has too many arguments specified.
+2017-04-16 16:22:39,674 INFO  Page Load of Login

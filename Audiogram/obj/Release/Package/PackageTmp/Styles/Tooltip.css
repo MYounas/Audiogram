@@ -1,0 +1,19 @@
+﻿ abbr
+{
+        /*border-bottom: 1px dotted #666;*/
+	/*cursor: help;*/
+}
+
+.customtooltip
+{
+	position:absolute;
+	background-color:#eeeefe;
+	border: 1px solid #aaaaca;
+	font-size: smaller;
+    font-family: Calibri;
+	padding:4px;
+	width: 300px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);	
+}

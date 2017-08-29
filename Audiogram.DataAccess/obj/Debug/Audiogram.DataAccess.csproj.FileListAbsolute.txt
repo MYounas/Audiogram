@@ -1,0 +1,40 @@
+D:\Agilosoft Projects\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\bin\Debug\AutoMapper.Net4.dll
+D:\Agilosoft Projects\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\bin\Debug\Audiogram.DataAccess.dll
+D:\Agilosoft Projects\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\bin\Debug\Audiogram.DataAccess.pdb
+D:\Agilosoft Projects\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\bin\Debug\AutoMapper.dll
+D:\Agilosoft Projects\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\bin\Debug\log4net.dll
+D:\Agilosoft Projects\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\bin\Debug\AutoMapper.xml
+D:\Agilosoft Projects\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\bin\Debug\log4net.xml
+D:\Agilosoft Projects\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\obj\Debug\Audiogram.DataAccess.dll
+D:\Agilosoft Projects\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\obj\Debug\Audiogram.DataAccess.pdb
+D:\Agilosoft Projects\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\obj\Debug\Audiogram.DataAccess.csprojResolveAssemblyReference.cache
+D:\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\bin\Debug\AutoMapper.Net4.dll
+D:\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\bin\Debug\Audiogram.DataAccess.dll
+D:\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\bin\Debug\Audiogram.DataAccess.pdb
+D:\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\bin\Debug\AutoMapper.dll
+D:\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\bin\Debug\log4net.dll
+D:\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\bin\Debug\AutoMapper.xml
+D:\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\bin\Debug\log4net.xml
+D:\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\obj\Debug\Audiogram.DataAccess.dll
+D:\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\obj\Debug\Audiogram.DataAccess.pdb
+D:\Audiogram\trunk\Code\Audiogram\Audiogram.DataAccess\obj\Debug\Audiogram.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\MY\Desktop\Audiogram\Audiogram.DataAccess\bin\Debug\AutoMapper.Net4.dll
+C:\Users\MY\Desktop\Audiogram\Audiogram.DataAccess\bin\Debug\Audiogram.DataAccess.dll
+C:\Users\MY\Desktop\Audiogram\Audiogram.DataAccess\bin\Debug\Audiogram.DataAccess.pdb
+C:\Users\MY\Desktop\Audiogram\Audiogram.DataAccess\bin\Debug\AutoMapper.dll
+C:\Users\MY\Desktop\Audiogram\Audiogram.DataAccess\bin\Debug\log4net.dll
+C:\Users\MY\Desktop\Audiogram\Audiogram.DataAccess\bin\Debug\AutoMapper.xml
+C:\Users\MY\Desktop\Audiogram\Audiogram.DataAccess\bin\Debug\log4net.xml
+C:\Users\MY\Desktop\Audiogram\Audiogram.DataAccess\obj\Debug\Audiogram.DataAccess.dll
+C:\Users\MY\Desktop\Audiogram\Audiogram.DataAccess\obj\Debug\Audiogram.DataAccess.pdb
+C:\Users\MY\Desktop\Audiogram\Audiogram.DataAccess\obj\Debug\Audiogram.DataAccess.csprojResolveAssemblyReference.cache
+D:\Audiogram\Audiogram\Audiogram.DataAccess\bin\Debug\AutoMapper.Net4.dll
+D:\Audiogram\Audiogram\Audiogram.DataAccess\bin\Debug\Audiogram.DataAccess.dll
+D:\Audiogram\Audiogram\Audiogram.DataAccess\bin\Debug\Audiogram.DataAccess.pdb
+D:\Audiogram\Audiogram\Audiogram.DataAccess\bin\Debug\AutoMapper.dll
+D:\Audiogram\Audiogram\Audiogram.DataAccess\bin\Debug\log4net.dll
+D:\Audiogram\Audiogram\Audiogram.DataAccess\bin\Debug\AutoMapper.xml
+D:\Audiogram\Audiogram\Audiogram.DataAccess\bin\Debug\log4net.xml
+D:\Audiogram\Audiogram\Audiogram.DataAccess\obj\Debug\Audiogram.DataAccess.csprojResolveAssemblyReference.cache
+D:\Audiogram\Audiogram\Audiogram.DataAccess\obj\Debug\Audiogram.DataAccess.dll
+D:\Audiogram\Audiogram\Audiogram.DataAccess\obj\Debug\Audiogram.DataAccess.pdb

@@ -1,0 +1,3 @@
+2017-02-04 21:11:35,861 INFO  Page Load of Login
+2017-02-04 21:13:32,666 INFO  Page Load of Login
+2017-02-04 21:13:53,203 INFO  The handle is invalid. (Exception from HRESULT: 0x80070006 (E_HANDLE))

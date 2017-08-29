@@ -1,0 +1,13 @@
+﻿
+.hardwareCaliberation-div{
+    width: 40%;
+    border: solid red;
+    margin-right: auto;
+    margin-left: auto;
+    }
+
+/*Fix alignment issue of label on extra small devices in Bootstrap 3.2*/ 
+.form-horizontal .control-label {
+    padding-top: 7px;
+    text-align: left;
+}

@@ -1,0 +1,5 @@
+2017-01-13 23:38:52,581 INFO  Page Load of Login
+2017-01-13 23:38:56,492 INFO  Page Load of Login
+2017-01-13 23:39:00,124 INFO  String was not recognized as a valid Boolean.
+2017-01-13 23:39:03,569 INFO  Page Load of Login
+2017-01-13 23:39:14,757 INFO  String was not recognized as a valid Boolean.

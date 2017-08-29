@@ -1,0 +1,31 @@
+2017-02-05 23:56:36,318 INFO  Page Load of Login
+2017-02-05 23:56:39,555 INFO  Page Load of Login
+2017-02-05 23:56:41,707 INFO  Page Load of Master
+2017-02-05 23:56:45,497 INFO  Page Load of Master
+2017-02-05 23:56:49,529 INFO  Page Load of Master
+2017-02-05 23:56:53,987 INFO  Page Load of Master
+2017-02-05 23:57:07,978 INFO  Page Load of Master
+2017-02-05 23:57:21,481 INFO  Page Load of Master
+2017-02-05 23:59:31,769 ERROR error:
+
+Mapping types:
+SqlDataReader -> List`1
+System.Data.SqlClient.SqlDataReader -> System.Collections.Generic.List`1[[Audiogram.Model.Driver, Audiogram.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+
+Destination path:
+List`1
+
+Source value:
+System.Data.SqlClient.SqlDataReader
+2017-02-05 23:59:44,494 INFO  Page Load of Master
+2017-02-06 00:00:07,898 ERROR error:
+
+Mapping types:
+SqlDataReader -> List`1
+System.Data.SqlClient.SqlDataReader -> System.Collections.Generic.List`1[[Audiogram.Model.Driver, Audiogram.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+
+Destination path:
+List`1
+
+Source value:
+System.Data.SqlClient.SqlDataReader

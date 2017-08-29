@@ -1,0 +1,13 @@
+﻿.panel-body ul li a {
+    margin: 2px !important;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 13px;
+    padding: 10px 15px;
+    list-style: none;
+    display: block;
+}
+
+a, a:hover, a:focus, a:visited, a:active {
+    /* text-decoration: none; */
+    /* text-decoration: underline !important; */
+}

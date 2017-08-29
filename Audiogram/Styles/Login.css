@@ -1,0 +1,277 @@
+﻿
+/***************Fancy Fonts start here*************/
+@font-face {
+    font-family: 'HelveticaLTStdRegular';
+    src: url('fonts/helveticaltstd-roman-webfont.eot');
+    src: url('fonts/helveticaltstd-roman-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helveticaltstd-roman-webfont.woff') format('woff'),
+         url('fonts/helveticaltstd-roman-webfont.ttf') format('truetype'),
+         url('fonts/helveticaltstd-roman-webfont.svg#HelveticaLTStdRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HelveticaCondensedBold';
+    src: url('fonts/helvetica_neue_condensed_bold-webfont.eot');
+    src: url('fonts/helvetica_neue_condensed_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helvetica_neue_condensed_bold-webfont.woff') format('woff'),
+         url('fonts/helvetica_neue_condensed_bold-webfont.ttf') format('truetype'),
+         url('fonts/helvetica_neue_condensed_bold-webfont.svg#HelveticaCondensedBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HelveticaNarrow';
+    src: url('fonts/helvetica_neue_condensed_bold-webfont.eot');
+    src: url('fonts/helvetica_neue_condensed_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helvetica_neue_condensed_bold-webfont.woff') format('woff'),
+         url('fonts/helvetica_neue_condensed_bold-webfont.ttf') format('truetype'),
+         url('fonts/helvetica_neue_condensed_bold-webfont.svg#helr47w') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HelveticaCondensedThin';
+    src: url('fonts/helvetica_neue_condensed_bold-webfont.eot');
+    src: url('fonts/helvetica_neue_condensed_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helvetica_neue_condensed_bold-webfont.woff') format('woff'),
+         url('fonts/helvetica_neue_condensed_bold-webfont.ttf') format('truetype'),
+         url('fonts/helvetica_neue_condensed_bold-webfont.svg#HelveticaCondensedThin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HelveticaInseratLTStd-Roman';
+    src: url('fonts/helvetica_neue_condensed_bold-webfont.eot');
+    src: url('fonts/helvetica_neue_condensed_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helvetica_neue_condensed_bold-webfont.woff') format('woff'),
+         url('fonts/helvetica_neue_condensed_bold-webfont.ttf') format('truetype'),
+         url('fonts/helvetica_neue_condensed_bold-webfont.svg#HelveticaInseratLTStd-Roman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/***************Fancy Fonts close here*************/
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 15px;
+    color: #898989;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+  font-family: Calibri !important;
+}
+
+a {
+    color: #3276B1;
+}
+
+.head
+{
+    text-align: center;
+    /*background-color: #3F7FCC;*/
+    /*background:#3F7FCC;
+    background:linear-gradient(#3F7FCC, #294F7F) repeat scroll 0 0 hsla(0, 0%, 0%, 0);*/
+    /*
+    background: #00a65a;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#00a65a), to(#008d4c));
+    background: -webkit-linear-gradient(#00a65a, #008d4c);
+    background: -moz-linear-gradient(#00a65a, #008d4c);
+    background: -ms-linear-gradient(#00a65a, #008d4c);
+    background: -o-linear-gradient(#00a65a, #008d4c);
+    background: linear-gradient(#00a65a, #008d4c);
+    */
+    background: #428bca;
+    color: #fff;
+    padding:16px 0px 22px 0px;
+}
+
+.head .title
+{
+    font-size:24px;
+}
+
+.content-wrap {    
+    margin: 0 auto;
+   
+}
+
+.content {
+    padding: 0px 10px; 
+    /*max-width: 960px; */
+    margin: 0 auto;
+    width: 100%;
+    min-width: 280px;
+    max-width: 960px;
+}
+
+.intro-image-wrap {
+    display: inline-block;
+    margin-top: 3.5%;
+    /*width: 475px;*/
+    width: 50.5%;
+    min-width: 270px;
+    float: left;
+}
+.intro-image-wrap img {
+    width: 100%;
+}
+.intro-image-wrap .btn {
+    background:#fff; 
+    color:#2a6496; 
+    margin-top:5px;
+}
+.intro-text-wrap {
+    background: #3276b1;
+    color: #fff;
+    padding: 0px 30px
+}
+.intro-text-wrap * {
+    font-family: open sans;
+    font-weight: 400;
+}
+
+.loginbox-wrap
+{
+    width: 42.7%;
+    min-width: 270px;
+    margin: 6.5% 0 0 0;
+    /*margin: 6.5% auto 0;*/
+    /*background-image: url('../Styles/Images/LoginBox.png');*/
+    /*background-size: 100% 100%;*/
+    background-repeat: no-repeat;
+    /*background-color: rgba(0,0,0,0.5);
+    background: #428bca; */
+    /*border:2px solid #444;*/
+    float: right;
+}
+
+.loginbox
+{
+    /*background-color: hsla(0, 0%, 0%, 0.6);*/
+    margin: 25px auto 0 auto;
+    padding: 8px 0 0px 0px;
+    min-width: 250px;
+    width: 81%;
+}
+
+.loginbox .logo-wrap {
+    margin-bottom: 35px;
+    margin-top: 0;
+}
+
+.loginbox .logo-wrap img {
+    width: 99%;
+}
+
+.loginbox .signup-wrap {
+    margin-top: 47%;
+    width:110%;
+}
+
+.login-text {
+    background: #242424;
+    color: #fff;
+    padding: 10px 0px;
+    margin-top:0px;
+    margin-bottom: 20px;
+} 
+
+.f-label
+{
+    display: inline-block;
+    font-size: 13px;
+    margin: 2px 0;
+    padding: 5px 0px;
+}
+
+.TextBox
+{
+    background-color: hsla(0, 0%, 100%, 0.4);
+    border: 1px solid #888;
+    padding:2px 4px;
+    cursor:default;
+    margin: 5px 0px;
+}
+
+.form-control:focus {
+    border-color: #666;
+    box-shadow: 0px 0px 0px transparent !important;
+}
+
+.btn
+{
+    display: inline-block;
+    margin-top:14px;
+    min-width:100px;
+    cursor:pointer;
+}
+.btn:hover
+{
+    background-color:rgba(35, 31, 31, 0.7);
+    color: #fff;
+}
+
+.btn-primary.black {
+    background: #242424;
+}
+
+.foot
+{
+    background-color: #EEEEEE;
+    text-align:center;
+    margin-top: 10px;
+    color: #aaa;
+    clear:both;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    padding: 0px 6px 1px;
+   
+}
+
+.foot .logo-wrap {
+    width: 99%;
+    margin: 12px auto 0 auto;
+}
+.foot .logo-wrap .logo {
+    width: 125px;
+    text-align:right;
+}
+.foot .logo-wrap .links {
+    width: 100%;
+    margin: 17px 0 10px;
+}
+.foot .logo-wrap .links a {
+    color: #5f9dd2;
+}
+
+
+/*********** RESPONSIVE CSS ************/
+
+
+@media (max-width: 768px) {
+    .content {
+        width: 50%;
+    }
+    .loginbox-wrap {
+        float: none;
+    }
+    .loginbox {
+        width: 100%;
+    }
+    .intro-image-wrap {
+        float: none;
+        margin-bottom: 45%;
+    }
+    .loginbox .signup-wrap {
+        margin-top: 10%;
+    }
+    .foot .logo-wrap {
+        width: 100%;
+    }
+}

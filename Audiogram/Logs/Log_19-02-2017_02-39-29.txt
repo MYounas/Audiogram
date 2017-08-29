@@ -1,0 +1,32 @@
+2017-02-19 02:39:29,885 INFO  Page Load of Login
+2017-02-19 02:39:32,791 INFO  Page Load of Login
+2017-02-19 02:39:33,173 INFO  Page Load of Master
+2017-02-19 02:39:37,226 INFO  Page Load of Master
+2017-02-19 02:40:38,951 INFO  Page Load of Master
+2017-02-19 02:40:42,036 INFO  Page Load of Master
+2017-02-19 02:42:21,554 INFO  Page Load of Master
+2017-02-19 02:42:42,755 INFO  Page Load of Master
+2017-02-19 02:45:13,893 INFO  Page Load of Master
+2017-02-19 02:45:17,008 ERROR error:Missing type map configuration or unsupported mapping.
+
+Mapping types:
+SqlDataReader -> Trip
+System.Data.SqlClient.SqlDataReader -> Audiogram.DataAccess.Model.Trip
+
+Destination path:
+Trip
+
+Source value:
+System.Data.SqlClient.SqlDataReader
+2017-02-19 02:45:20,869 INFO  Page Load of Master
+2017-02-19 02:47:29,410 ERROR error:Missing type map configuration or unsupported mapping.
+
+Mapping types:
+SqlDataReader -> Trip
+System.Data.SqlClient.SqlDataReader -> Audiogram.DataAccess.Model.Trip
+
+Destination path:
+Trip
+
+Source value:
+System.Data.SqlClient.SqlDataReader

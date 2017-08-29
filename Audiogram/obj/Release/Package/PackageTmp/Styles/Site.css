@@ -1,0 +1,330 @@
+/************  USE THIS FILE FOR YOUR STYLES  ***********/
+/**********************css for User Management*************/
+
+.head
+{
+    text-align: center;
+    background: #428bca;
+    color: #fff;
+    padding:16px 0px 22px 0px;
+    font-family: 'HelveticaCondensedBold';
+}
+
+.head .title
+{
+    font-size:24px;
+}
+
+.tabletextbox {
+width: 876px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 0px;
+background-color:rgb(0, 93, 255);
+}
+
+ .textcolumn {
+            width: 107px;
+            text-align: left;
+            font-family: Verdana;
+            font-size: 14px;
+            height: 61px;
+           padding-top: 2px;
+           padding-left: 17px;
+           color: white;
+        }
+.heading {
+        font-family: verdana;
+    font-size: 35px;
+    text-align: center;
+    text-decoration: #0600FF;
+    margin-top: 41px;    
+}
+.Customersearch {
+text-align:left;
+margin-left:auto;
+margin-right:auto;
+width: 399px;
+padding-bottom: 17px;
+
+}
+.txtBoxAutoComplete {
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+
+.textboxcoulmn {
+    height: 61px;
+    text-decoration-color:white;
+}
+
+.UserTableContainer {
+   width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    padding-bottom:217px;
+    height:500px;
+    /*margin-top: 3px ;*/
+     margin-top:0px ;
+}
+.ui-menu {
+    list-style: none;
+    padding:0px;
+    display: block;
+    float: left;
+    background-color: white;
+    /*-webkit-box-shadow: 2px 10px 12px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 10px 12px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 10px 12px 0px rgba(0,0,0,0.75);*/
+    font-family: Calibri !important;
+    font-size: small;
+    width:250px;
+    max-height: 350px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.ui-menu .ui-menu-item {
+    white-space: nowrap;
+}
+.ui-state-hover, .ui-autocomplete li:hover {
+    color: White;
+    background: #D3D3D3;
+    outline: none;
+}
+
+/*.jtable-wrap {
+    overflow-x: auto;
+}*/
+
+.jtable-column-header-text {
+  /* font-size: larger !important;*/
+}
+
+div.jtable-main-container div.jtable-bottom-panel {
+    padding: 16px !important;
+}
+
+div.jtable-main-container div.jtable-bottom-panel div.jtable-left-area {
+    margin: 7px 0px;
+}
+
+div.jtable-column-header-container {
+    height: auto !important; 
+}
+
+/**********************************************************************/
+/**********************css for Customer Management*************/
+.CustomerTableContainer {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    padding-bottom:217px;
+}
+.tabletextboxCustManage {
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 0px;
+background-color:rgb(0, 93, 255);
+height: 40px;
+margin-top: 1.5%;
+ background-color: #428bca;
+}
+
+.textboxcoulmnCustomer {
+    /*height: 40px;*/
+    text-decoration-color:white;
+}
+.textcolumnCustomer {
+            width: 107px;
+            text-align: left;
+            font-family: Verdana;
+            font-size: 14px;
+            /*height: 61px;*/
+           padding-top: 2px;
+           padding-left: 17px;
+           color: white;
+        }
+
+    .popbox {
+        display: none;
+        position: absolute;
+        top: 20px;
+        left: 25px;
+        border: 1px solid #255684;
+        border-radius:2px;
+        padding: 4px 8px;
+        z-index: 9999;
+        background-color: #3276b1;
+        display: none;
+        color: white;
+        font-weight: normal;
+        min-width: 100px;
+        max-width: 300px;
+        /*-webkit-box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);
+    box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);*/
+    }
+
+    .popbox ul
+    {
+        padding-left: 12px;
+        margin-bottom: 0;
+    }
+
+.btn-default:focus
+{
+    background-color:#fff;
+}
+
+.ui-widget-overlay
+{
+    position:fixed;
+}
+
+.jtable-page-info
+{
+    color: #fff;
+}
+
+.jtable-goto-page
+{
+    margin-left:5px;
+}
+.jtable-goto-page, .jtable-page-size-change
+{
+    color:#222;
+}
+.jtable-goto-page select, .jtable-page-size-change select {
+    /*padding:6px 0px;*/
+    margin: 0 5px;
+    /*border: 1px solid #ccc;*/
+}
+div.jtable-main-container div.jtable-bottom-panel .jtable-page-list {
+    margin-left: 0 !important;
+}
+.customer-search {
+    border:1px solid #ccc;
+    width:auto;
+    float:right;
+
+    width:100%;
+
+    height:34px;
+}
+.jtable-bottom-panel {
+    display: block;
+}
+.custom_horizontal_form_field .jtable-input-field-container {
+  width: 326px  !important;
+  width: 339px  !important;/*IE*/
+ 
+ }
+ .custom_horizontal_form_field .jtable-input-field-container .jtable-input-label {
+   /*width : 148px !important;*/
+   width: 45%;
+   /*float: left !important;*/
+   display: inline-block;
+ }
+
+.custom_horizontal_form_field div.jtable-input {
+    display: inline-block;
+    width: 50%;
+}
+
+.custom_horizontal_form_field input, 
+.custom_horizontal_form_field select, 
+.custom_horizontal_form_field textarea {
+    width: 100%;
+    max-width:100%;
+}
+.custom_horizontal_form_field input[type="checkbox"],
+.custom_horizontal_form_field input[type="radio"] {
+    width: auto;
+}
+
+ .jqx-tabs-header {
+     padding:5px 0px !important;
+     background: #428bca !important;
+ }
+ /*.panel-body ul li {
+     padding:8px 12px;
+     margin-left: 3px;
+     border:0px none;
+     color:#fff;
+ }*/
+ .panel-body ul li:hover {
+     background:#357ebd;
+ }
+ .panel-body ul li.jqx-tabs-title-selected-top.jqx-fill-state-pressed {
+     background: #235E92;
+     background-color: #235E92 !important;
+ }
+ .jqx-tabs-content-element {
+     padding: 10px 15px;
+ }
+ .jqx-widget-content {
+     font-family:Calibri !important;
+ }
+
+
+ .ui-dialog .ui-dialog-titlebar {
+     background: #242424;
+ }
+
+ .ui-dialog .ui-dialog-title {
+     color: #fff;
+ }
+
+/**********************************************************************/
+
+.text-left-f {
+    text-align: left !important;
+}
+.main-links-wrap {
+    width:100%;
+    /*width: 80%; */
+    margin:4% auto 0px; 
+    clear:both;
+}
+.main-link {
+    border: 0px solid #428bca; 
+    background: #428bca;
+    color: #F7F7F7;
+    -moz-border-radius: 90px; 
+    -wekit-border-radius: 90px; 
+    border-radius: 110px; 
+    padding: 18px 28px 8px;
+    display:inline-block;
+    text-decoration: none !important;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.main-link:hover {
+    border: 0px solid #242424; 
+    background: #242424;
+    color: #F7F7F7;
+    text-decoration: none !important;
+}
+.main-link .text {
+    font-weight:normal;
+    font-family: Calibri;
+}
+
+.total-container {
+    min-width: 360px;
+}
+
+.newTestFormwidth {
+ width: 25.6%;
+}
+
+.NoWrap {
+        white-space: nowrap;
+        margin-left: auto;
+       margin-right: 8%;
+}

@@ -1,0 +1,432 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Audiogram.Master.cs" Inherits="Audiogram.Audiogram" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <title></title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+    <link rel="shortcut icon" href="Styles/Images/MLAudiogram.ico" />
+    <asp:ContentPlaceHolder ID="commonhead" runat="server">
+
+        <!-- General style sheet start here -->
+
+        <style>
+        </style>
+
+        <link href="/Styles/bootstrap-css.css" rel="stylesheet" type="text/css" />
+        <link href="/Styles/jquery.ui.1.10.3.ie.css" rel="stylesheet" type="text/css" />
+        <link href="/Styles/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css" />
+        <link href="/Styles/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="/Styles/msgBoxLight.css" rel="stylesheet" type="text/css" />
+        <link href="/Styles/style.css" rel="stylesheet" type="text/css" />
+        <link href="/Styles/Site.css" rel="stylesheet" type="text/css" />
+        <link href="/Styles/Tooltip.css" rel="stylesheet" type="text/css" />
+
+
+        <!-- General style sheet close here -->
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+
+        <!-- jTable style file -->
+        <link href="/Styles/jtable/lightcolor/gray/jtable.css" rel="stylesheet" type="text/css" />
+
+
+        <!-- General script start here -->
+
+
+        <script src='<%=ResolveUrl("~/CommonScripts/jquery-2.1.3.min.js")%>' type="text/javascript"></script>
+        <script src='<%=ResolveUrl("~/CommonScripts/jquery-ui-1.10.3.custom.min.js")%>' type="text/javascript"></script>
+        <script src='<%=ResolveUrl("~/CommonScripts/modernizr-2.8.3.min.js")%>' type="text/javascript"></script>
+
+        <link href="/Styles/bootstrap-datepicker.css" rel="stylesheet" type="text/css" />
+        <script src='<%=ResolveUrl("~/CommonScripts/bootstrap-datepicker.js")%>' type="text/javascript"></script>
+
+        <script src='<%=ResolveUrl("~/CommonScripts/common.js")%>' type="text/javascript"></script>
+        <script src='<%=ResolveUrl("~/CommonScripts/bootstrap.min.js")%>'></script>
+        <script src='<%=ResolveUrl("~/CommonScripts/Tooltip.js")%>'></script>
+
+
+
+        <!-- General script close here -->
+
+        <!-- A helper library for JSON serialization -->
+        <script type="text/javascript" src="/CommonScripts/jtable/external/json2.js"></script>
+
+        <!-- Core jTable script file start here -->
+        <script type="text/javascript" src="/CommonScripts/jtable/jquery.jtable.js"></script>
+        <script src="/CommonScripts/jtablesite.js" type="text/javascript"></script>
+        <!-- Core jTable script file close here -->
+
+        <!-- ASP.NET Web Forms extension for jTable start here -->
+        <script type="text/javascript" src="/CommonScripts/jtable/extensions/jquery.jtable.aspnetpagemethods.js"></script>
+        <link href="/CommonScripts/validationEngine/validationEngine.jquery.css" rel="stylesheet" type="text/css" />
+        <!-- ASP.NET Web Forms extension for jTable close here -->
+
+        <!-- Import Javascript files for validation engine (in Head section of HTML) start here -->
+        <script type="text/javascript" src="/CommonScripts/validationEngine/jquery.validationEngine.js"></script>
+        <script type="text/javascript" src="/CommonScripts/validationEngine/jquery.validationEngine-en.js"></script>
+
+        <script type="text/javascript" src="/CommonScripts/jquery.msgBox.js"></script>
+        <script type="text/javascript" src="/CommonScripts/BlockUI.js"></script>
+        <!-- Import Javascript files for validation engine (in Head section of HTML) close here -->
+
+        <%--   <link href="/Styles/bootstrap.min.css" rel="stylesheet" />
+        <link href="/Styles/bootstrap-theme.min.css" rel="stylesheet" />--%>
+
+
+
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+
+        <div id="main-wrapper" class="main-wrapper container-fluid">
+
+            <!-- Header start here -->
+
+            <header id="header" class="header">
+                <nav class="navbar">
+                    <div class="logo-wrap">
+                        <a href="/Modules/Common/MainPage.aspx">
+                            <img class="logo" src="/Styles/Images/1.png" />
+
+                        </a>
+                    </div>
+
+                    <div class="trigger-menu-wrap visible-xs text-center">
+                        <a href="#" class="trigger-menu" onclick="$('.menu-wrap').toggleClass('in');">
+                            <i class="fa fa-lg fa-bars" style="font-size: 1.6em; color: #fff; padding: 12px 0px;"></i>
+                        </a>
+                    </div>
+                    <!-- Mobile Main Navigation button start here -->
+                    <%--<div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>--%>
+                    <!-- Mobile Main Navigation button close here -->
+
+                    <div class="menu-wrap navbar-collapse collapse">
+                        <div class="menu top">
+                            <ul>
+                            </ul>
+                        </div>
+
+                        <div class="menu top-right pull-right">
+                            <ul>
+                                <li class="top-item"><a href="#">Welcome,
+                                    <asp:Label ID="lblUser" runat="server" />
+                                    (<asp:Label ID="lblCustomer" runat="server" />)</a><span class="caret"></span>
+                                    <ul class="sub">
+                                        <li><a id="onclick" style="cursor: pointer; text-align: left;">Edit Account Information</a></li>
+                                        <li><a id="contactus" style="cursor: pointer; text-align: left;">Contact Us</a></li>
+                                        <li>
+                                            <asp:LinkButton ID="LinkButton1" Style="cursor: pointer; text-align: left;" runat="server" OnClick="Logout_Click">Logout</asp:LinkButton></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Header close here -->
+
+
+            <!-- Page Heading start here -->
+
+            <div id="myContainer">
+                <asp:HiddenField ID="hdnPageTitle" runat="server" Value='' />
+            </div>
+            <div class="page-header title padding-left padding-right">
+                <div class="content-wrap">
+                    <h2>
+                        <asp:Label ID="lblPageTitle" runat="server"></asp:Label></h2>
+                </div>
+            </div>
+
+            <!-- Page Heading close here -->
+
+            <asp:ContentPlaceHolder ID="SitePlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+
+            <footer id="footer" class="foot">
+
+                <div class="logo-wrap-foot text-right">
+                    <%--    <img src="/Styles/Images/MLaudiogram_small_logo.png" class="logo">--%>
+                    <table class="links" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td align="right">
+                                    <table cellpadding="0" cellspacing="0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: right;"><span></span></td>
+                                                <td class="footerspace" aria-hidden="true">&nbsp;</td>
+                                                <td class="footerspace" aria-hidden="true">&nbsp;</td>
+                                                <td style="text-align: right;"><a href="#" class="footerlink" id="ftrTerms">Terms and Conditions &nbsp;</a></td>
+                                                <td class="footerspace" aria-hidden="true">&nbsp;</td>
+                                                <td class="footerspace" aria-hidden="true">&nbsp;</td>
+                                                <td style="text-align: right;"><a href="#" class="footerlink" id="ftrPrivacy">Privacy Policy  &nbsp;</a></td>
+                                                <td class="footerspace" aria-hidden="true">&nbsp;</td>
+                                                <td class="footerspace" aria-hidden="true">&nbsp;</td>
+                                                <td style="text-align: right;"><span id="ftrCopy" class="secondary ltr">© 2016 - ML PSG</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!--div class="copyright-content">Copyright © 2016 Audiogram. All rights reserved.</!--div-->
+            </footer>
+
+        </div>
+
+        <asp:HiddenField ID="menudata" runat="server" Value='' ClientIDMode="Static" />
+    </form>
+</body>
+
+<!---------------------Start User Information Edit Pop Up here ----->
+<%--   <div id="opaque" class="ui-widget-overlay ui-front" style="display:none"></div>--%>
+<div id="contactdiv" style="display: none">
+    <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons edit-account-holder" tabindex="-1" role="dialog" aria-describedby="ui-id-Edit-User-Info" style="position: absolute; height: auto; width: auto; top: 11%; left: 37%; display: block;" aria-labelledby="ui-id-Edit-User-Info">
+        <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+            <span id="ui-id-4" class="ui-dialog-title">Edit User Information</span>
+            <button class="ui-dialog-titlebar-close"></button>
+        </div>
+        <div id="ui-id-Edit-User-Info" class="ui-dialog-content ui-widget-content" style="width: auto; min-height: 17px; max-height: none; height: auto;">
+            <form id="form" class="jtable-dialog-form jtable-create-form">
+
+                <div class="jtable-input-field-container">
+                    <div class="jtable-input-label">User Name:</div>
+                    <div class="jtable-input jtable-text-input">
+                        <input id="txtShowUserName" type="text" maxlength="50" disabled="disabled" />
+                    </div>
+                </div>
+
+                <div class="jtable-input-field-container">
+                    <div class="jtable-input-label">First Name:</div>
+                    <div class="jtable-input jtable-text-input">
+                        <input id="FirstName" type="text" maxlength="50" class="validate[maxSize[50],minSize[4]]" />
+                    </div>
+                </div>
+                <div class="jtable-input-field-container">
+                    <div class="jtable-input-label">Last Name:</div>
+                    <div class="jtable-input jtable-text-input">
+                        <input id="LastName" type="text" maxlength="50" class="validate[maxSize[50]]" />
+                    </div>
+                </div>
+                <div class="jtable-input-field-container">
+                    <div class="jtable-input-label">Birth Date:</div>
+                    <div class="jtable-input jtable-text-input">
+                        <input id="BirthdateCreate" type="text" />
+                    </div>
+                </div>
+                <div class="jtable-input-field-container">
+                    <div class="jtable-input-label">Telephone Number:</div>
+                    <div class="jtable-input jtable-text-input">
+                        <input id="TelephoneNumberCreate" type="text" maxlength="15" class="validate[maxSize[15],custom[onlyNumber]]" />
+                    </div>
+                </div>
+                <div class="jtable-input-field-container">
+                    <div class="jtable-input-label">Email:</div>
+                    <div class="jtable-input jtable-text-input">
+                        <input id="EmailCreate" type="text" maxlength="50" class="validate[custom[email],maxSize[50]]" />
+                    </div>
+                </div>
+                <div class="jtable-input-field-container">
+                    <div class="jtable-input-label">Password:*</div>
+                    <div class="jtable-input jtable-text-input">
+                        <input type="password" id="Password" maxlength="60" class="validate[required,maxSize[60],minSize[4],custom[passw]]" />
+                    </div>
+                </div>
+                <div class="jtable-input-field-container">
+                    <div class="jtable-input-label">Confirm Password:*</div>
+                    <div class="jtable-input jtable-text-input">
+                        <input id="ConfirmPassword" type="password" maxlength="60" class="validate[required,equals[Password],maxSize[60],minSize[4],custom[passw]]" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+            <div class="ui-dialog-buttonset">
+                <button type="button" id="cancel" class="btn btn-primary" onclick="$('.ui-widget-overlay').css('display', 'none');">Cancel</button>
+                <input id="send" class="btn btn-primary" type="submit" value="Save" />
+                <%-- <button  type="button" ></button>--%>
+            </div>
+        </div>
+        <%--<div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div>
+        <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
+        <div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
+        <div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div>
+        <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div>
+        <div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div>
+        <div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div>
+        <div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div>--%>
+    </div>
+</div>
+<!---------------------End User Information Edit Pop Up here ------->
+
+<!-------------------Start Contact us Pop Up here ------------------>
+<div id="contactdiv2" style="display: none">
+    <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons " tabindex="-1" role="dialog" aria-describedby="ui-id-ContactUs" style="position: absolute; height: auto; width: auto; top: 0px; left: 563px; display: block;" aria-labelledby="ui-id-ContactUs">
+        <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+            <span id="ui-id-42" class="ui-dialog-title">Contact Us</span>
+            <button class="ui-dialog-titlebar-close"></button>
+        </div>
+        <div id="ui-id-ContactUs" class="ui-dialog-content ui-widget-content" style="overflow: hidden; width: auto; min-height: 17px; max-height: none; height: auto;">
+            <form id="form2" class="jtable-dialog-form jtable-create-form">
+                <div class="jtable-input-field-container">
+                    <div class="jtable-input-label">Name:*</div>
+                    <div class="jtable-input jtable-text-input">
+                        <input id="Name" type="text" maxlength="50" class="validate[required,maxSize[50]]" />
+                    </div>
+                </div>
+                <div class="jtable-input-field-container">
+                    <div class="jtable-input-label">Message:*</div>
+                    <div class="jtable-input jtable-textarea-input">
+                        <textarea id="txtMessage" style="width: 100%; font-size: 13px;" maxlength="250" class="validate[required,maxSize[250]]" onpaste="return  global.TextAreaMaxLengthOnPaste(this,'250',event);" onkeypress="return global.TextAreaMaxLength(this,'250',event);"></textarea>
+                    </div>
+                </div>
+                <div class="jtable-input-field-container no-border">
+                    <div class="jtable-input-label">Email:</div>
+                    <div class="jtable-input jtable-text-input">
+                        <input id="txtEmail" type="text" maxlength="50" class="validate[custom[email],maxSize[50]]" />
+                    </div>
+                </div>
+                <%--  <div class="jtable-input-field-container no-border">
+                         <div class="jtable-input-label">Type of Message</div>
+                         <select class="form-control" style="width:100% !important; font-size:13px; padding:6px 5px !important;">
+                                 <option>Support</option>
+                                 <option>Other</option>
+                             </select>
+                     </div> --%>
+                <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+                    <div class="ui-dialog-buttonset" style="font-size: 15px; padding-right: 12px;">
+                        <button type="button" id="cancel2" class="btn btn-primary" onclick="$('.ui-widget-overlay').css('display', 'none');">Cancel</button>
+                        <button id="submit" type="button" class="btn btn-primary">Save</button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<!-------------------End Contact us Pop Up here ----------------->
+<div id="CreateUserpopup" style="display: none">
+    <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons" tabindex="-1" role="dialog" aria-describedby="ui-id-4" style="position: absolute; height: auto; width: auto; top: 0px; left: 564px; display: block;" aria-labelledby="ui-id-5">
+        <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+            <span id="ui-id-5" class="ui-dialog-title">Add new record</span>
+            <button class="ui-dialog-titlebar-close"></button>
+        </div>
+        <div id="ui-id-Create-User" class="ui-dialog-content ui-widget-content" style="width: auto; min-height: 11px; max-height: none; height: auto;">
+            <form id="CreateUserForm" class="jtable-dialog-form jtable-create-form">
+
+                <div class="jtable-input-field-container" style="border-bottom: 1px solid #ddd; padding: 2px 0px 3px 0px;">
+                    <div class="jtable-input-label" style="font-weight: bold;">First Name:*</div>
+                    <div class="jtable-input jtable-text-input">
+                        <input id="CreateFirstName" type="text" name="FirstName" maxlength="50" class="validate[required,maxSize[50]]" />
+                    </div>
+                </div>
+                <div class="jtable-input-field-container" style="border-bottom: 1px solid #ddd; padding: 2px 0px 3px 0px;">
+                    <div class="jtable-input-label" style="font-weight: bold;">Last Name:</div>
+                    <div class="jtable-input jtable-text-input">
+                        <input id="CreateLastName" type="text" name="LastName" maxlength="50" class="validate[maxSize[50]]" />
+                    </div>
+                </div>
+                <div class="jtable-input-field-container" style="border-bottom: 1px solid #ddd; padding: 2px 0px 3px 0px;">
+                    <div class="jtable-input-label" style="font-weight: bold;">Email:</div>
+                    <div class="jtable-input jtable-text-input">
+                        <input id="CreateEmail" type="text" name="Email" maxlength="50" class="validate[maxSize[50],custom[email]]" />
+                    </div>
+                </div>
+                <div class="jtable-input-field-container" style="border-bottom: 1px solid #ddd; padding: 2px 0px 3px 0px;">
+                    <div class="jtable-input-label" style="font-weight: bold;">Contact Number:</div>
+                    <div class="jtable-input jtable-text-input">
+                        <input id="CreateTelephoneNumber" type="text" name="TelephoneNumber" class="validate[maxSize[15],custom[onlyNumber]]" />
+                    </div>
+                </div>
+                <div class="jtable-input-field-container" style="border-bottom: 1px solid #ddd; padding: 2px 0px 3px 0px;">
+                    <div class="jtable-input-label" style="font-weight: bold;">Birthdate:</div>
+                    <div class="jtable-input jtable-date-input">
+                        <input id="CreateBirthdate" type="text" name="Birthdate" class="validate[custom[dateFormat]]" />
+                    </div>
+                </div>
+                <div class="jtable-input-field-container" style="border-bottom: 1px solid #ddd; padding: 2px 0px 3px 0px;">
+                    <div class="jtable-input-label" style="font-weight: bold;">Status:</div>
+                    <div class="jtable-input jtable-checkbox-input">
+                        <input id="CreateIsActive" type="checkbox" name="IsActive" checked="checked" value="true" />
+                        <span class="jtable-option-text-clickable">Active</span>
+                    </div>
+                </div>
+                <div class="jtable-input-field-container" style="border-bottom: 1px solid #ddd; padding: 2px 0px 3px 0px;">
+                    <div class="jtable-input-label">Notes:</div>
+                    <div class="jtable-input jtable-textarea-input">
+                        <textarea id="CreateNotes" name="Notes" style="width: 183px;" class="validate[maxSize[250]]" onpaste="return  global.TextAreaMaxLengthOnPaste(this,'250',event);" onkeypress="return global.TextAreaMaxLength(this,'250',event);"></textarea>
+                    </div>
+                </div>
+                <div class="jtable-input-field-container" style="border-bottom: 1px solid #ddd; padding: 2px 0px 3px 0px;">
+                    <div class="jtable-input-label" style="font-weight: bold;">Participant ID:*</div>
+                    <div class="jtable-input jtable-text-input">
+                        <input id="CreateUserName" type="text" name="UserName" class="validate[required,maxSize[50],minSize[4],custom[onlyLetterNumber]]" maxlength="50" />
+                    </div>
+                </div>
+                <div class="jtable-input-field-container" style="border-bottom: 1px solid #ddd; padding: 2px 0px 3px 0px;">
+                    <div class="jtable-input-label" style="font-weight: bold;">Password:*</div>
+                    <div class="jtable-input jtable-password-input">
+                        <input id="CreatePassword" type="password" name="Password" maxlength="60" class="validate[required,maxSize[60],minSize[4],custom[passw]]" />
+                    </div>
+                </div>
+                <div class="jtable-input-field-container" style="border-bottom: 1px solid #ddd; padding: 2px 0px 3px 0px;">
+                    <div class="jtable-input-label" style="font-weight: bold;">Confirm Password:*</div>
+                    <div class="jtable-input jtable-password-input">
+                        <input id="CreateConfirmPassword" type="password" maxlength="60" name="ConfirmPassword" class="validate[required,equals[CreatePassword],custom[passw]]" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+            <div class="ui-dialog-buttonset">
+                <button type="button" id="cancelCreateUser" class="btn btn-primary" onclick="CancelCreateUser();return false;">Cancel</button>
+                <input id="AddRecordSaveButton" class="btn btn-primary" type="submit" value="Save" />
+                <%--  <button type="button" id="AddRecordSaveButton" class="btn btn-primary"  >Save</button>--%>
+            </div>
+        </div>
+        <%--<div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div>
+        <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
+        <div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
+        <div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div>
+        <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div>
+        <div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div>
+        <div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div>
+        <div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div>--%>
+    </div>
+</div>
+</html>
+
+

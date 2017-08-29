@@ -1,0 +1,13 @@
+﻿
+    .contactUs-div{
+    	margin: 20px;
+    }
+    
+	/* Fix alignment issue of label on extra small devices in Bootstrap 3.2 */
+    .form-horizontal .control-label{
+        padding-top: 7px;
+        text-align:left;
+    }
+
+
+
