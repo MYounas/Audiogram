@@ -8,10 +8,9 @@
 //------------------------------------------------------------------------------
 
 namespace Audiogram.Modules.Managment {
-
-
-    public partial class AddLubricant
-    {
+    
+    
+    public partial class AddLubricant {
         
         /// <summary>
         /// ScriptManager2 control.
@@ -32,12 +31,30 @@ namespace Audiogram.Modules.Managment {
         protected global::System.Web.UI.WebControls.Panel pnlNewTest1;
         
         /// <summary>
-        /// drpTrip control.
+        /// txtDrivers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpTrip;
+        protected global::System.Web.UI.WebControls.TextBox txtDrivers;
+        
+        /// <summary>
+        /// txtVehicle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtVehicle;
+        
+        /// <summary>
+        /// txtRouteDetail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtRouteDetail;
     }
 }

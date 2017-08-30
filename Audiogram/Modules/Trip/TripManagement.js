@@ -221,32 +221,63 @@
 
 function LO(id) {
     $(document).ready(function () {
-        window.open(window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1) + 'AddLubricant.aspx?id=' + id)
+        id = validateId(id)
+        if (id != '') {
+            window.open(window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1) + 'AddLubricant.aspx?id=' + id)
+        }
     });
 }
 
 function DACL(id) {
     $(document).ready(function () {
-        window.open(window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1) + 'AddDACL.aspx?id=' + id)
+        id = validateId(id)
+        if (id != '') {
+            window.open(window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1) + 'AddDACL.aspx?id=' + id)
+        }
+
     });
 }
 
 function CTD(id) {
     $(document).ready(function () {
-        window.open(window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1) + 'AddCTD.aspx?id=' + id)
+        id = validateId(id)
+        if (id != '') {
+            window.open(window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1) + 'AddCTD.aspx?id=' + id)
+        }
     });
 }
 
 function report(id) {
     $(document).ready(function () {
-        window.open(window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1) + 'Report.aspx?id=' + id)
+        id = validateId(id)
+        if (id != '') {
+            window.open(window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1) + 'Report.aspx?id=' + id)
+        }
         //window.open(window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1) + 'Report.aspx')
     });
 }
 function EditTrip(id) {
     $(document).ready(function () {
-        window.open(window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1) + 'StartTrip.aspx?id=' + id)
+        id = validateId(id)
+        if (id != '') {
+            window.open(window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1) + 'StartTrip.aspx?id=' + id)
+        }
         //window.open(window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1) + 'Report.aspx')
     });
 }
+
+function validateId(id) {
+
+        if (id == '') {
+            id = $('#SelectedId').val()
+        }
+        if (id == '') {
+            alert('please select record')
+            return id;
+        }
+        
+        return id;
+}
+
+
 

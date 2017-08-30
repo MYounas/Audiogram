@@ -11,32 +11,50 @@ namespace Audiogram.Modules.Managment {
     
     
     public partial class AddDACL {
-
+        
         /// <summary>
-        /// ScriptManager2 control.
+        /// ScriptManager3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager ScriptManager3;
-
+        
         /// <summary>
-        /// pnlNewTest1 control.
+        /// pnlNewTest2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlNewTest2;
-
+        
         /// <summary>
-        /// drpTrip control.
+        /// txtDrivers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpTrip;
+        protected global::System.Web.UI.WebControls.TextBox txtDrivers;
+        
+        /// <summary>
+        /// txtVehicle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtVehicle;
+        
+        /// <summary>
+        /// txtRouteDetail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtRouteDetail;
     }
 }

@@ -35,18 +35,44 @@
                                 <div class="form-group">
                                     <fieldset class="fset fset-item">
                                         <legend class="fset-title">&nbsp;<i class="fa fa-lg fa-cogs"></i>&nbsp;
-                                            Add Cash Transaction Details
+                                            Trip Detail
                                         </legend>
                                         <div class="form-horizontal col-lg-8">
 
 
-                                            <div class="form-group col-xs-12">
+                                           <%-- <div class="form-group col-xs-12">
                                                 <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Selected Trip:</label>
                                                 <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
                                                     <asp:DropDownList ID="drpTrip" ClientIDMode="Static" DataTextField="" class="form-control with-icon col-xs-10 text-left-f" runat="server" OnSelectedIndexChanged="drpTrip_SelectedIndexChanged" AutoPostBack="true">
                                                     </asp:DropDownList>
                                                 </div>
+                                            </div>--%>
+
+                                              <div class="form-group col-xs-12">
+                                                <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Drivers</label>
+                                                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                    <asp:Textbox ID="txtDrivers" ClientIDMode="Static" DataTextField="" class="form-control with-icon col-xs-10 text-left-f" runat="server" AutoPostBack="true"  readonly>
+                                                    </asp:Textbox>
+                                                </div>
+
+                                                   <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Vehicle</label>
+                                                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                    <asp:Textbox ID="txtVehicle" ClientIDMode="Static" DataTextField="" class="form-control with-icon col-xs-10 text-left-f" runat="server" AutoPostBack="true" readonly>
+                                                    </asp:Textbox>
+                                                </div>
+
                                             </div>
+    
+                                            <div class="form-group col-xs-12">
+                                         
+                                            </div>
+
+                                           <div class="form-group col-xs-12">
+                                                                    <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Route Detail:</label>
+                                                                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                                        <textarea class="form-control input-sm" id="txtRouteDetail" rows="3" runat="server" readonly></textarea>
+                                                                    </div>
+                                           </div>
 
                                         </div>
 

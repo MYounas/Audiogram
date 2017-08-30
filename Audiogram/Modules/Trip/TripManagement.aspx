@@ -38,6 +38,10 @@
                                         <legend class="fset-title">Manage Trips</legend>
                                             <div class="bg-blue-legend clearfix">
                                                    <asp:Button ID="btnStart" runat="server"  class="btn btn-primary" Text="Start Trip" ClientIDMode="Static" Style="float: right;border-color:white; width: 10% !important; " OnClick="btnStart_Click" ></asp:Button>
+                                                     <input id="Button1"  class="btn btn-primary" type="button" value="Add Lubricant Oil" onclick="LO('')" style="float: left;border-color:white; width: 10% !important; margin-left:5px; " />
+                                                     <input id="Button2"  class="btn btn-primary" type="button" value="Add Diesal & Cash Loan" onclick="DACL('')" style="float: left;border-color:white; width: 10% !important; margin-left:5px; " />
+                                                     <input id="Button3"  class="btn btn-primary" type="button" value="Add Cash Transaction Detail" onclick="CTD('')" style="float: left;border-color:white; width: 10% !important;margin-left:5px " />
+                                                     <input id="Button4"  class="btn btn-primary" type="button" value="Print Report" onclick="report('')" style="float: left;border-color:white; width: 10% !important;margin-left:5px " />
                                          
                                         </div>
                                          
@@ -57,6 +61,8 @@
         </div>
 
         <!-- Body Content start here -->
+
+        <asp:HiddenField ClientIDMode="static" ID="SelectedId" Value="" runat="server" />
 
     </section>
 </asp:Content>

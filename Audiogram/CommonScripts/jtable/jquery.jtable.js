@@ -3789,8 +3789,13 @@ var reloadTable = false;//when refresh page then date is decrease cause of timez
             var counta = 0; // for every new row
             $row.on('click', 'td', function () {
                 console.log("ABC");
-                
+                var hdnID = $('#SelectedId')
 
+                if (hdnID != '') {
+
+                    $('#SelectedId').val($row.data('record').ID)
+                }
+               
                 counta = counta + 1;
                 //console.log(counta + "count");
                 $row.attr('counta', counta);

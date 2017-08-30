@@ -28,6 +28,7 @@ namespace Audiogram.Modules.Trips
 
         protected void btnStart_Click(object sender, EventArgs e)
         {
+            string s = SelectedId.Value;
             Response.Redirect("StartTrip.aspx",false);
         }
 
