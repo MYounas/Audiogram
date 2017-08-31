@@ -186,6 +186,8 @@
     <Content Include="Modules\Common\css\style.css" />
     <Content Include="Modules\Management\AddTire.aspx" />
     <Content Include="Modules\Management\AddTire.js" />
+    <Content Include="Modules\Management\OilManagement.aspx" />
+    <Content Include="Modules\Management\OilManagement.js" />
     <Content Include="Modules\Management\PumpManagement.aspx" />
     <Content Include="Modules\Management\PumpManagement.js" />
     <Content Include="Modules\Management\DriverManagement.aspx" />
@@ -550,6 +552,13 @@
     </Compile>
     <Compile Include="Modules\Management\AddTire.aspx.designer.cs">
       <DependentUpon>AddTire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Management\OilManagement.aspx.cs">
+      <DependentUpon>OilManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Management\OilManagement.aspx.designer.cs">
+      <DependentUpon>OilManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\Management\PumpManagement.aspx.cs">
       <DependentUpon>PumpManagement.aspx</DependentUpon>

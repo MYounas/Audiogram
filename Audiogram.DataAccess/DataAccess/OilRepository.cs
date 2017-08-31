@@ -27,7 +27,7 @@ namespace Audiogram.DataAccess
                     connection.Open();
                 }
 
-                SqlCommand command = new SqlCommand("usp_SearchPumps", connection);
+                SqlCommand command = new SqlCommand("usp_SearchOils", connection);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@SearchOil", SearchOil);
                 command.Parameters.AddWithValue("@recordsFrom", RecordFrom);
@@ -38,30 +38,30 @@ namespace Audiogram.DataAccess
                 SqlDataAdapter dataAdapter = new SqlDataAdapter();
                 dataAdapter.SelectCommand = command;
                 dataAdapter.Fill(dataset);
-                Mapper.CreateMap<IDataReader, Vehicle>();
+                Mapper.CreateMap<IDataReader, Oil>();
                 IDataReader dataReader = command.ExecuteReader();
-                List<Vehicle> lstVehicles = Mapper.Map<List<Vehicle>>(dataReader);
+                List<Oil> lstOils = Mapper.Map<List<Oil>>(dataReader);
 
-                if (status == "active")
-                {
-                    lstVehicles = lstVehicles.Where(x => x.Status == 1).ToList();
-                }
-                else if (status == "idle")
-                {
-                    lstVehicles = lstVehicles.Where(x => x.Status == 0).ToList();
-                }
+                //if (status == "active")
+                //{
+                //    lstVehicles = lstVehicles.Where(x => x.Status == 1).ToList();
+                //}
+                //else if (status == "idle")
+                //{
+                //    lstVehicles = lstVehicles.Where(x => x.Status == 0).ToList();
+                //}
 
-                if (forDropDown)
-                {
-                    lstVehicles = lstVehicles.Where(x => x.Status == 0).ToList();
-                    Vehicle temp = new Vehicle();
-                    temp.ID = 0;
-                    temp.Make = "--SELECT--";
-                    lstVehicles.Insert(0, temp);
-                }
+                //if (forDropDown)
+                //{
+                //    lstVehicles = lstVehicles.Where(x => x.Status == 0).ToList();
+                //    Vehicle temp = new Vehicle();
+                //    temp.ID = 0;
+                //    temp.Make = "--SELECT--";
+                //    lstVehicles.Insert(0, temp);
+                //}
 
                 int totalCount = Convert.ToInt32((dataset.Tables[1].Rows[0] as DataRow).ItemArray[0]);
-                return new { Result = "OK", Records = lstVehicles, TotalRecordCount = totalCount };
+                return new { Result = "OK", Records = lstOils, TotalRecordCount = totalCount };
 
             }
             catch (Exception ex)
@@ -79,7 +79,7 @@ namespace Audiogram.DataAccess
             }
         }
 
-        public static object CreateOil(Vehicle addedRecord)
+        public static object CreateOil(Oil addedRecord)
         {
 
             //int IsCreated = 0;
@@ -94,16 +94,11 @@ namespace Audiogram.DataAccess
                 }
 
 
-                SqlCommand command = new SqlCommand("usp_CreateVehicle", connection);
+                SqlCommand command = new SqlCommand("usp_CreateOil", connection);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@Make", addedRecord.Make);
-                command.Parameters.AddWithValue("@Model", addedRecord.Model);
-                command.Parameters.AddWithValue("@Version", addedRecord.Version);
-                command.Parameters.AddWithValue("@Year", addedRecord.Year);
-                command.Parameters.AddWithValue("@CC", addedRecord.CC);
-                command.Parameters.AddWithValue("@NumberPlate", addedRecord.NumberPlate);
-                command.Parameters.AddWithValue("@Color", addedRecord.Color);
-                command.Parameters.AddWithValue("@IsActive", addedRecord.IsActive);
+                command.Parameters.AddWithValue("@Name", addedRecord.Name);
+                command.Parameters.AddWithValue("@Company", addedRecord.Company);
+                command.Parameters.AddWithValue("@Type", addedRecord.Type);
                 DataRow dataRow = dataTable.NewRow();
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
                 dataAdapter.Fill(dataTable);
@@ -123,7 +118,7 @@ namespace Audiogram.DataAccess
             catch (Exception ex)
             {
                 Logger.logging.log.Error(ex.StackTrace);
-                return new { Result = "ERROR", Message = "Could not save Vehicle. Please contact the System Administrator." };
+                return new { Result = "ERROR", Message = "Could not save Data. Please contact the System Administrator." };
             }
 
             finally
@@ -135,7 +130,7 @@ namespace Audiogram.DataAccess
             }
         }
 
-        public static object UpdateOil(Vehicle updatedRecord)
+        public static object UpdateOil(Oil updatedRecord)
         {
             int IsUpdated = 0;
             var connection = DBConnection.GetConnection();
@@ -147,17 +142,12 @@ namespace Audiogram.DataAccess
                     connection.Open();
                 }
 
-                SqlCommand command = new SqlCommand("usp_UpdateVehicle", connection);
+                SqlCommand command = new SqlCommand("usp_UpdateOil", connection);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@ID", updatedRecord.ID);
-                command.Parameters.AddWithValue("@Make", updatedRecord.Make);
-                command.Parameters.AddWithValue("@Model", updatedRecord.Model);
-                command.Parameters.AddWithValue("@Version", updatedRecord.Version);
-                command.Parameters.AddWithValue("@Year", updatedRecord.Year);
-                command.Parameters.AddWithValue("@CC", updatedRecord.CC);
-                command.Parameters.AddWithValue("@NumberPlate", updatedRecord.NumberPlate);
-                command.Parameters.AddWithValue("@Color", updatedRecord.Color);
-                command.Parameters.AddWithValue("@IsActive", updatedRecord.IsActive);
+                command.Parameters.AddWithValue("@Name", updatedRecord.Name);
+                command.Parameters.AddWithValue("@Company", updatedRecord.Company);
+                command.Parameters.AddWithValue("@Type", updatedRecord.Type);
                 DataRow dataRow = dataTable.NewRow();
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
                 dataAdapter.Fill(dataTable);
@@ -165,7 +155,7 @@ namespace Audiogram.DataAccess
                 IDataReader dataReader = command.ExecuteReader();
                 IsUpdated = Convert.ToInt32(dataRow["IsUpdated"]);
                 if (IsUpdated == 0)
-                { return new { Result = "ERROR", Message = "This Vehicle already exists." }; }
+                { return new { Result = "ERROR", Message = "This Data already exists." }; }
                 else
                 {
                     return new { Result = "OK" };
@@ -199,7 +189,7 @@ namespace Audiogram.DataAccess
                     connection.Open();
                 }
 
-                SqlCommand command = new SqlCommand("usp_DeleteVehicle", connection);
+                SqlCommand command = new SqlCommand("usp_DeleteOil", connection);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@Id", Id);
                 command.Parameters.Add("@err_message", SqlDbType.Int);
@@ -208,7 +198,7 @@ namespace Audiogram.DataAccess
                 IDataReader dataReader = command.ExecuteReader();
                 error = Convert.ToInt32(command.Parameters["@err_message"].Value);
                 if (error == 1)
-                { return new { Result = "ERROR", Message = "Unable to delete vehicle." }; }
+                { return new { Result = "ERROR", Message = "Unable to delete Data." }; }
                 else
                 {
                     return new { Result = "OK" };

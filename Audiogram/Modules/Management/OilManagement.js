@@ -11,7 +11,7 @@
 
         _this.is_PageLoaded = true;
 
-        $('#PumpTableContainer').jtable({
+        $('#OilTableContainer').jtable({
 
             columnResizable: false,
             defaultSorting: 'Name ASC',
@@ -29,10 +29,10 @@
                 addSuccessfully: 'Data is saved successfully.'
             },
             actions: {
-                listAction: '/Modules/Management/PumpManagement.aspx/RecordList',
-                createAction: '/Modules/Management/PumpManagement.aspx/CreateRecord',
-                updateAction: '/Modules/Management/PumpManagement.aspx/UpdateRecord',
-                deleteAction: '/Modules/Management/PumpManagement.aspx/DeleteRecord'
+                listAction: '/Modules/Management/OilManagement.aspx/RecordList',
+                createAction: '/Modules/Management/OilManagement.aspx/CreateRecord',
+                updateAction: '/Modules/Management/OilManagement.aspx/UpdateRecord',
+                deleteAction: '/Modules/Management/OilManagement.aspx/DeleteRecord'
             },
             
             fields: {
@@ -54,14 +54,23 @@
                     sequenceNumber: 2
                 },
                
-                Location: {
-                    title: 'Location:*',
+                Company: {
+                    title: 'Company:*',
                     edit: true,
                     list: true,
                     create: true,
                     width: '11%',
                     maxlength: '50',
                     sequenceNumber:3
+                },
+                Type: {
+                    title: 'Type:*',
+                    edit: true,
+                    list: true,
+                    create: true,
+                    width: '11%',
+                    maxlength: '50',
+                    sequenceNumber:4
                 },
                 
             },
@@ -109,7 +118,7 @@
                 $(".formError").css('display', 'none');
                 // $('#UserTableContainer').jtable('load', { Id: indexId });
             },
-            addRecordButton: $('#addrecord-pumpTableContainer')
+            addRecordButton: $('#addrecord-oilTableContainer')
 
         });
 
@@ -117,11 +126,11 @@
 
         indexId = $('#hdnAccountHolderSignup').val();
         var AccountwithUser = "{'searchWord':'" + searchword + "'," + " 'AccountHolderId':' " + indexId + "'}";
-        $('#PumpTableContainer').jtable('load', { Id: AccountwithUser });
+        $('#OilTableContainer').jtable('load', { Id: AccountwithUser });
 
 
         //////////////////////User Search box Loads jtable on key up//////////////////////////////////
-        $("#txtAutoCompletepumps").keyup(function () {
+        $("#txtAutoCompleteoils").keyup(function () {
             searchword = $(this).val();
 
 
@@ -137,8 +146,8 @@
 
         function TxtAutoComplete() {
             var AccountwithUser = "{'searchWord':'" + searchword + "'," + " 'AccountHolderId':' " + indexId + "'}";
-            $('#PumpTableContainer').jtable('load', { Id: AccountwithUser });
-            $('#txtAutoCompletepumps').focus();
+            $('#OilTableContainer').jtable('load', { Id: AccountwithUser });
+            $('#txtAutoCompleteoils').focus();
         }
         //////////////////////Account Holder Search box Loads jtable on clear//////////////////////////////////
         $("#txtBoxAutoComplete").on('keyup', function () {
@@ -158,7 +167,7 @@
             }
         });
         //////////////////////
-        if (indexId === '' || indexId === 0) { $('#addrecord-pumpTableContainer').show(); }
+        if (indexId === '' || indexId === 0) { $('#addrecord-oilTableContainer').show(); }
 
 
         $("#txtBoxAutoComplete").on('focus mouseup', function () {
