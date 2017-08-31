@@ -41,3 +41,10 @@ D:\Audiogram\Audiogram\Audiogram.DataAccess\obj\Debug\Audiogram.DataAccess.pdb
 C:\Users\user\Desktop\Audiogram\Audiogram.DataAccess\obj\Debug\Audiogram.DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\user\Desktop\Audiogram\Audiogram.DataAccess\obj\Debug\Audiogram.DataAccess.dll
 C:\Users\user\Desktop\Audiogram\Audiogram.DataAccess\obj\Debug\Audiogram.DataAccess.pdb
+C:\Users\user\Desktop\Audiogram\Audiogram.DataAccess\bin\Debug\AutoMapper.Net4.dll
+C:\Users\user\Desktop\Audiogram\Audiogram.DataAccess\bin\Debug\Audiogram.DataAccess.dll
+C:\Users\user\Desktop\Audiogram\Audiogram.DataAccess\bin\Debug\Audiogram.DataAccess.pdb
+C:\Users\user\Desktop\Audiogram\Audiogram.DataAccess\bin\Debug\AutoMapper.dll
+C:\Users\user\Desktop\Audiogram\Audiogram.DataAccess\bin\Debug\log4net.dll
+C:\Users\user\Desktop\Audiogram\Audiogram.DataAccess\bin\Debug\AutoMapper.xml
+C:\Users\user\Desktop\Audiogram\Audiogram.DataAccess\bin\Debug\log4net.xml

@@ -79,7 +79,7 @@ namespace Audiogram.DataAccess
             }
         }
 
-        public static object CreateOil(Oil addedRecord)
+        public static object CreateOil(Vehicle addedRecord)
         {
 
             //int IsCreated = 0;
@@ -135,7 +135,7 @@ namespace Audiogram.DataAccess
             }
         }
 
-        public static object UpdateOil(Oil updatedRecord)
+        public static object UpdateOil(Vehicle updatedRecord)
         {
             int IsUpdated = 0;
             var connection = DBConnection.GetConnection();

@@ -121,7 +121,7 @@
 
 
         //////////////////////User Search box Loads jtable on key up//////////////////////////////////
-        $("#txtAutoCompletedrivers").keyup(function () {
+        $("#txtAutoCompletepumps").keyup(function () {
             searchword = $(this).val();
 
 
@@ -137,8 +137,8 @@
 
         function TxtAutoComplete() {
             var AccountwithUser = "{'searchWord':'" + searchword + "'," + " 'AccountHolderId':' " + indexId + "'}";
-            $('#DriverTableContainer').jtable('load', { Id: AccountwithUser });
-            $('#txtAutoCompletedrivers').focus();
+            $('#PumpTableContainer').jtable('load', { Id: AccountwithUser });
+            $('#txtAutoCompletepumps').focus();
         }
         //////////////////////Account Holder Search box Loads jtable on clear//////////////////////////////////
         $("#txtBoxAutoComplete").on('keyup', function () {
@@ -158,7 +158,7 @@
             }
         });
         //////////////////////
-        if (indexId === '' || indexId === 0) { $('#addrecord-driverTableContainer').show(); }
+        if (indexId === '' || indexId === 0) { $('#addrecord-pumpTableContainer').show(); }
 
 
         $("#txtBoxAutoComplete").on('focus mouseup', function () {

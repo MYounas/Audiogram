@@ -1,19 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Configuration;
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls.WebParts;
 using System.Web.Services;
-using System.Data;
 using Audiogram.DataAccess;
 using Audiogram.Model;
-using System.Web.Security;
 using Audiogram.Modules.Common;
+using Newtonsoft.Json;
 
 namespace Audiogram.Modules.Managment
 {
@@ -65,7 +55,7 @@ namespace Audiogram.Modules.Managment
        }
 
        [WebMethod(EnableSession = true)]
-       public static object CreateRecord(Vehicle record)
+       public static object CreateRecord(Pump record)
         {
            return PumpRepository.CreatePump(record);
         }

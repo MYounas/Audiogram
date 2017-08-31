@@ -22,13 +22,13 @@ namespace Audiogram.Modules.Managment {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// txtAutoCompletedrivers control.
+        /// txtAutoCompletepumps control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAutoCompletedrivers;
+        protected global::System.Web.UI.WebControls.TextBox txtAutoCompletepumps;
         
         /// <summary>
         /// FilteredTextBoxExtender1 control.
