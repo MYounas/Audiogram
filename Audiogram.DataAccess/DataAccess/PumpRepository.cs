@@ -13,7 +13,7 @@ namespace Audiogram.DataAccess
     public class PumpRepository
     {
 
-        public static object GetLOList(int TripId, int RecordFrom, string JSorting, int RecordTo)
+        public static object GetPumpList(int TripId, int RecordFrom, string JSorting, int RecordTo)
         {
             string[] words = JSorting.Split(' ');
             string jtsortColumn = words[0];
@@ -60,7 +60,7 @@ namespace Audiogram.DataAccess
             }
         }
 
-        public static object DeleteLO(int Id)
+        public static object DeletePump(int Id)
         {
             int error = 0;
             var connection = DBConnection.GetConnection();
@@ -104,7 +104,7 @@ namespace Audiogram.DataAccess
             }
         }
 
-        public static object CreateLO(LubricantOil LO)
+        public static object CreatePump(LubricantOil LO)
         {
 
             //int IsCreated = 0;
@@ -159,7 +159,7 @@ namespace Audiogram.DataAccess
 
         }
 
-        public static object UpdateLO(LubricantOil LO)
+        public static object UpdatePump(LubricantOil LO)
         {
 
             //int IsCreated = 0;

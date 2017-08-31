@@ -75,6 +75,7 @@
     <Compile Include="Common\Enumeration.cs" />
     <Compile Include="Common\Helper.cs" />
     <Compile Include="DataAccess\DACLRepository.cs" />
+    <Compile Include="DataAccess\OilRepository.cs" />
     <Compile Include="DataAccess\PumpRepository.cs" />
     <Compile Include="DataAccess\LORepository.cs" />
     <Compile Include="DataAccess\CTDRepository.cs" />
