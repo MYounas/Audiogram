@@ -1,4 +1,5 @@
 ﻿using Audiogram.DataAccess.Model;
+using Audiogram.Model;
 using AutoMapper;
 using System;
 using System.Collections.Generic;
@@ -12,8 +13,7 @@ namespace Audiogram.DataAccess
 {
     public class OilRepository
     {
-
-        public static object GetOilList(int TripId, int RecordFrom, string JSorting, int RecordTo)
+        public static object GetOilList(string SearchOil, int RecordFrom, string JSorting, int RecordTo, string status = "", bool forDropDown = false)
         {
             string[] words = JSorting.Split(' ');
             string jtsortColumn = words[0];
@@ -27,9 +27,9 @@ namespace Audiogram.DataAccess
                     connection.Open();
                 }
 
-                SqlCommand command = new SqlCommand("searchLO", connection);
+                SqlCommand command = new SqlCommand("usp_SearchPumps", connection);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@TripId", TripId);
+                command.Parameters.AddWithValue("@SearchOil", SearchOil);
                 command.Parameters.AddWithValue("@recordsFrom", RecordFrom);
                 command.Parameters.AddWithValue("@recordsTo", RecordTo);
                 command.Parameters.AddWithValue("@lSortCol", jtsortColumn);
@@ -38,11 +38,30 @@ namespace Audiogram.DataAccess
                 SqlDataAdapter dataAdapter = new SqlDataAdapter();
                 dataAdapter.SelectCommand = command;
                 dataAdapter.Fill(dataset);
-                Mapper.CreateMap<IDataReader, LubricantOil>();
+                Mapper.CreateMap<IDataReader, Vehicle>();
                 IDataReader dataReader = command.ExecuteReader();
-                List<LubricantOil> lstAccountHolder = Mapper.Map<List<LubricantOil>>(dataReader);
+                List<Vehicle> lstVehicles = Mapper.Map<List<Vehicle>>(dataReader);
+
+                if (status == "active")
+                {
+                    lstVehicles = lstVehicles.Where(x => x.Status == 1).ToList();
+                }
+                else if (status == "idle")
+                {
+                    lstVehicles = lstVehicles.Where(x => x.Status == 0).ToList();
+                }
+
+                if (forDropDown)
+                {
+                    lstVehicles = lstVehicles.Where(x => x.Status == 0).ToList();
+                    Vehicle temp = new Vehicle();
+                    temp.ID = 0;
+                    temp.Make = "--SELECT--";
+                    lstVehicles.Insert(0, temp);
+                }
+
                 int totalCount = Convert.ToInt32((dataset.Tables[1].Rows[0] as DataRow).ItemArray[0]);
-                return new { Result = "OK", Records = lstAccountHolder, TotalRecordCount = totalCount };
+                return new { Result = "OK", Records = lstVehicles, TotalRecordCount = totalCount };
 
             }
             catch (Exception ex)
@@ -60,6 +79,115 @@ namespace Audiogram.DataAccess
             }
         }
 
+        public static object CreateOil(Oil addedRecord)
+        {
+
+            //int IsCreated = 0;
+            var connection = DBConnection.GetConnection();
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                if (connection.State != ConnectionState.Open)
+                {
+                    connection.Open();
+                }
+
+
+                SqlCommand command = new SqlCommand("usp_CreateVehicle", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Make", addedRecord.Make);
+                command.Parameters.AddWithValue("@Model", addedRecord.Model);
+                command.Parameters.AddWithValue("@Version", addedRecord.Version);
+                command.Parameters.AddWithValue("@Year", addedRecord.Year);
+                command.Parameters.AddWithValue("@CC", addedRecord.CC);
+                command.Parameters.AddWithValue("@NumberPlate", addedRecord.NumberPlate);
+                command.Parameters.AddWithValue("@Color", addedRecord.Color);
+                command.Parameters.AddWithValue("@IsActive", addedRecord.IsActive);
+                DataRow dataRow = dataTable.NewRow();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                dataAdapter.Fill(dataTable);
+                dataRow = dataTable.Rows[0];
+
+                if (Convert.ToInt32(dataRow["IsCreated"]) == 0)
+                {
+                    return new { Result = "ERROR", Message = dataRow["CreatedMessage"] };
+                }
+
+                else
+                {
+                    addedRecord.ID = Convert.ToInt32(dataRow["ID"]);
+                    return new { Result = "OK", Record = addedRecord };
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.logging.log.Error(ex.StackTrace);
+                return new { Result = "ERROR", Message = "Could not save Vehicle. Please contact the System Administrator." };
+            }
+
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+        public static object UpdateOil(Oil updatedRecord)
+        {
+            int IsUpdated = 0;
+            var connection = DBConnection.GetConnection();
+            DataTable dataTable = new DataTable();
+            try
+            {
+                if (connection.State != ConnectionState.Open)
+                {
+                    connection.Open();
+                }
+
+                SqlCommand command = new SqlCommand("usp_UpdateVehicle", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@ID", updatedRecord.ID);
+                command.Parameters.AddWithValue("@Make", updatedRecord.Make);
+                command.Parameters.AddWithValue("@Model", updatedRecord.Model);
+                command.Parameters.AddWithValue("@Version", updatedRecord.Version);
+                command.Parameters.AddWithValue("@Year", updatedRecord.Year);
+                command.Parameters.AddWithValue("@CC", updatedRecord.CC);
+                command.Parameters.AddWithValue("@NumberPlate", updatedRecord.NumberPlate);
+                command.Parameters.AddWithValue("@Color", updatedRecord.Color);
+                command.Parameters.AddWithValue("@IsActive", updatedRecord.IsActive);
+                DataRow dataRow = dataTable.NewRow();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                dataAdapter.Fill(dataTable);
+                dataRow = dataTable.Rows[0];
+                IDataReader dataReader = command.ExecuteReader();
+                IsUpdated = Convert.ToInt32(dataRow["IsUpdated"]);
+                if (IsUpdated == 0)
+                { return new { Result = "ERROR", Message = "This Vehicle already exists." }; }
+                else
+                {
+                    return new { Result = "OK" };
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Logger.logging.log.Error(ex.StackTrace);
+                return new { Result = "ERROR", Message = "Could not connect to database. Please contact the System Administrator." };
+            }
+
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+
+        }
+
         public static object DeleteOil(int Id)
         {
             int error = 0;
@@ -71,7 +199,7 @@ namespace Audiogram.DataAccess
                     connection.Open();
                 }
 
-                SqlCommand command = new SqlCommand("DeleteLO", connection);
+                SqlCommand command = new SqlCommand("usp_DeleteVehicle", connection);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@Id", Id);
                 command.Parameters.Add("@err_message", SqlDbType.Int);
@@ -80,7 +208,7 @@ namespace Audiogram.DataAccess
                 IDataReader dataReader = command.ExecuteReader();
                 error = Convert.ToInt32(command.Parameters["@err_message"].Value);
                 if (error == 1)
-                { return new { Result = "ERROR", Message = "Unable to delete Data." }; }
+                { return new { Result = "ERROR", Message = "Unable to delete vehicle." }; }
                 else
                 {
                     return new { Result = "OK" };
@@ -103,116 +231,5 @@ namespace Audiogram.DataAccess
                 }
             }
         }
-
-        public static object CreateOil(LubricantOil LO)
-        {
-
-            //int IsCreated = 0;
-            var connection = DBConnection.GetConnection();
-            DataTable dataTable = new DataTable();
-
-            try
-            {
-                if (connection.State != ConnectionState.Open)
-                {
-                    connection.Open();
-                }
-
-                SqlCommand command = new SqlCommand("CreateLO", connection);
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@Date", LO.Date);
-                command.Parameters.AddWithValue("@Workshop_Brand", LO.Workshop_Brand);
-                command.Parameters.AddWithValue("@Qty_Ltr", LO.Qty_Ltr);
-                command.Parameters.AddWithValue("@Amount", LO.Amount);
-                command.Parameters.AddWithValue("@TripId", LO.TripId);
-
-                DataRow dataRow = dataTable.NewRow();
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-                dataAdapter.Fill(dataTable);
-                dataRow = dataTable.Rows[0];
-
-                if (Convert.ToInt32(dataRow["IsCreated"]) == 0)
-                {
-                    return new { Result = "ERROR", Message = dataRow["CreatedMessage"] };
-                }
-
-                else
-                {
-                    LO.ID = Convert.ToInt32(dataRow["ID"]);
-                    return new { Result = "OK", Record = LO };
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.logging.log.Error(ex.StackTrace);
-                return new { Result = "ERROR", Message = "Could not save tire. Please contact the System Administrator." };
-            }
-
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                {
-                    connection.Close();
-                }
-            }
-
-
-        }
-
-        public static object UpdateOil(LubricantOil LO)
-        {
-
-            //int IsCreated = 0;
-            var connection = DBConnection.GetConnection();
-            DataTable dataTable = new DataTable();
-
-            try
-            {
-                if (connection.State != ConnectionState.Open)
-                {
-                    connection.Open();
-                }
-
-
-                SqlCommand command = new SqlCommand("UpdateLO", connection);
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@ID", LO.ID);
-                command.Parameters.AddWithValue("@Date", LO.Date);
-                command.Parameters.AddWithValue("@Workshop_Brand", LO.Workshop_Brand);
-                command.Parameters.AddWithValue("@Qty_Ltr", LO.Qty_Ltr);
-                command.Parameters.AddWithValue("@Amount", LO.Amount);
-
-                DataRow dataRow = dataTable.NewRow();
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-                dataAdapter.Fill(dataTable);
-                dataRow = dataTable.Rows[0];
-
-                if (Convert.ToInt32(dataRow["IsUpdated"]) == 0)
-                {
-                    return new { Result = "ERROR", Message = "Tire Updated Successfully !" };
-                }
-
-                else
-                {
-                    return new { Result = "OK", Record = LO };
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.logging.log.Error(ex.StackTrace);
-                return new { Result = "ERROR", Message = "Could not update Record. Please contact the System Administrator." };
-            }
-
-            finally
-            {
-                if (connection.State == ConnectionState.Open)
-                {
-                    connection.Close();
-                }
-            }
-
-
-        }
-
     }
 }

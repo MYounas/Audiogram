@@ -168,7 +168,7 @@
                 }
             },
             formCreated: function (event, data) {
-                if (indexId == ' ') {
+                if (indexId === ' ') {
                     indexId = 0;
                 }
             
@@ -205,7 +205,7 @@
            // $("#helpTooltip").click(function () { alert("call"); });
 
             $(window).keydown(function (event) {
-                if (event.keyCode == 13) {
+                if (event.keyCode === 13) {
                     event.preventDefault();
                     return false;
                 }

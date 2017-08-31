@@ -2,7 +2,7 @@
 
     this.checkPassword = function checkPassword(field, rules, i, options) {
 
-        if (field.val() != $('#Edit-Password').val()) {
+        if (field.val() !== $('#Edit-Password').val()) {
             return "Please Confirm Password";
         }
     };
@@ -10,7 +10,7 @@
 
     var txtAutoCompleteDelay = null;
     $(window).keydown(function (event) {
-        if (event.keyCode == 13) {
+        if (event.keyCode === 13) {
             event.preventDefault();
             return false;
         }
@@ -174,9 +174,9 @@
             data.form.parent().css('width', '334px').css('height', '370px');
             $(data.form).addClass("custom_horizontal_form_field");
             var headerText = $(data.form).parents('.ui-dialog').find('.ui-dialog-title').text() || '';
-            if (headerText == 'Add new record') {
+            if (headerText === 'Add new record') {
                 headerText = 'Add New Vehicle';
-            } else if (headerText == 'Edit Record') {
+            } else if (headerText === 'Edit Record') {
                 headerText = 'Edit Vehicle';
             }
 
@@ -198,7 +198,7 @@
             console.log(data);
 
 
-            if (data.form.find('input[name="UserId"]').val() == '') {
+            if (data.form.find('input[name="UserId"]').val() === '') {
                 data.form.find('input[name="UserId"]').val(0)
             }
             $(".formError").css('display', 'block');
