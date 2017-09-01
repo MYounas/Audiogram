@@ -32,9 +32,26 @@
             actions: {
                 listAction: '/Modules/Trip/TripManagement.aspx/RecordList',
                 //createAction: '/Modules/Management/AddTire.aspx/CreateRecord',
-                //updateAction: '/Modules/Management/AddTire.aspx/UpdateRecord',
+                //updateAction: '/Modules/Management/AddTire.aspx/UpdateRecord', //open for testing
                 //deleteAction: '/Modules/Management/AddTire.aspx/DeleteRecord'
+                //updateAction: function (postData, jtParams) {
+                //    return $.Deferred(function ($dfd) {
+                //        $.ajax({
+                //            url: '/AddTire.aspx/UpdateRecord?jtStartIndex=' + jtParams.jtStartIndex + '&jtPageSize=' + jtParams.jtPageSize + '&jtSorting=' + jtParams.jtSorting,
+                //            type: 'GET',
+                //            dataType: 'json',
+                //            data: postData,
+                //            success: function (data) {
+                //                $dfd.resolve(data);
+                //            },
+                //            error: function () {
+                //                $dfd.reject();
+                //            }
+                //        });
+                //    });
+                //},
             },
+            
             
             fields: {
                 ID: {
@@ -191,7 +208,21 @@
                             return '<button title="Edit Trip" class="jtable-command-button jtable-edit-command-button" onclick="EditTrip(' + data.record.ID + ')";><span>Edit Trip</span></button>';
                         }
                     }
-                }
+                },
+
+                //CustomAction8: {
+                //    title: '',
+                //    //width: '1%',
+                //    sorting: false,
+                //    create: false,
+                //    edit: false,
+                //    list: true,
+                //    display: function (data) {
+                //        if (data.record) {
+                //            return '<a target="_blank" href="./AddTire.aspx/UpdateRecord";>Expenses1</a>';
+                //        }
+                //    }
+                //}
             },
             formCreated: function (event, data) {
                 if (indexId === ' ') {

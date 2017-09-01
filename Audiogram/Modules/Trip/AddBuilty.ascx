@@ -1,6 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AddBuilty.ascx.cs" Inherits="Audiogram.Modules.Managment.AddBuilty" %>
 
-
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 <%--<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="Server">

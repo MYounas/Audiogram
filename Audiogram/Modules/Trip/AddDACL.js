@@ -102,6 +102,15 @@ _this = new (function _userManagement() {
                     maxlength: '50',
                     sequenceNumber: 5
                 },
+                Remarks: {
+                    title: 'Remarks',
+                    edit: true,
+                    list: true,
+                    create: true,
+                    width: '10%',
+                    maxlength: '50',
+                    sequenceNumber: 6
+                },
             },
             formCreated: function (event, data) {
                 if (indexId == ' ') {
