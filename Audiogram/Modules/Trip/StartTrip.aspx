@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Audiogram.Master" EnableEventValidation="false" AutoEventWireup="true" CodeBehind="StartTrip.aspx.cs" Inherits="Audiogram.Modules.Trips.StartTrip" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
-
+<%@ Register Src="~/Modules/Trip/AddBuilty.ascx" TagPrefix="uc1" TagName="AddBuilty" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="Server">
 
@@ -62,6 +62,7 @@
                                                     <li class="active"><a href="#basic" aria-controls="basic" role="tab" data-toggle="tab">Basic</a></li>
                                                     <li><a href="#expenses" aria-controls="expensis" role="tab" data-toggle="tab">Expenses</a></li>
                                                     <li><a href="#settlement" aria-controls="settlement" role="tab" data-toggle="tab">Settlement</a></li>
+                                                    <li><a href="#builty" aria-controls="builty" role="tab" data-toggle="tab">Builty</a></li>
                                                 </ul>
                                                 <!-- Tab panes -->
                                                 <div class="tab-content" style="padding-top: 20px">
@@ -278,6 +279,10 @@
                                                                 </div>
                                                             </div>
                                                         </asp:Panel>
+                                                    </div>
+
+                                                    <div role="tabpanel" class="tab-pane" id="builty">
+                                                        <uc1:AddBuilty runat="server" id="AddBuilty" />
                                                     </div>
 
                                                 </div>

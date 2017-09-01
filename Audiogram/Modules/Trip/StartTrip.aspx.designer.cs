@@ -328,6 +328,15 @@ namespace Audiogram.Modules.Trips {
         protected global::System.Web.UI.WebControls.TextBox txtSetMisc4;
         
         /// <summary>
+        /// AddBuilty control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Audiogram.Modules.Managment.AddBuilty AddBuilty;
+        
+        /// <summary>
         /// btnStart control.
         /// </summary>
         /// <remarks>

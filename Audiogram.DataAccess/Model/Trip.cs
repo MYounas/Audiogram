@@ -43,6 +43,8 @@ namespace Audiogram.DataAccess.Model
         public int SetMisc3 { get; set; }
         public int SetMisc4 { get; set; }
 
+        
+
 
         public object this[string propertyName]
         {
