@@ -1,4 +1,5 @@
-﻿_this = new (function _userManagement() {
+﻿
+_this = new (function _userManagement() {
     var searchword = "";
     var txtAutoCompleteDelay = null;
     var arrayCompany = [];
@@ -12,13 +13,13 @@
 
         _this.is_PageLoaded = true;
 
-        $('#AddBuiltyContainer').jtable({
+        $('#AddExpensesContainer').jtable({
 
             columnResizable: false,
             defaultSorting: 'ID ASC',
             sorting: true,
             selecting: true,
-            //gotoPageArea: 'combobox',
+            // gotoPageArea: 'combobox',
             paging: true, //Enables paging
             pageSize: 50,
             columnSelectable: false,
@@ -30,23 +31,23 @@
                 addSuccessfully: 'Data is saved successfully.'
             },
             actions: {
-                listAction: '/Modules/Trip/AddBuilty.ascx/RecordList',
-                createAction: '/Modules/Trip/AddBuilty.ascx/CreateRecord',
-                updateAction: '/Modules/Trip/AddBuilty.ascx/UpdateRecord',
-                deleteAction: '/Modules/Trip/AddBuilty.ascx/DeleteRecord'
+                listAction: '/Modules/Trip/AddExpenses.aspx/RecordList',
+                createAction: '/Modules/Trip/AddExpenses.aspx/CreateRecord',
+                updateAction: '/Modules/Trip/AddExpenses.aspx/UpdateRecord',
+                deleteAction: '/Modules/Trip/AddExpenses.aspx/DeleteRecord'
             },
 
             fields: {
-                No: {
-                    title: 'No',
+                ID: {
+                    title: 'ID',
                     key: true,
                     edit: false,
                     list: false,
                     create: false,
                     sequenceNumber: 1
                 },
-                Client: {
-                    title: 'Client',
+                Fix: {
+                    title: 'Fix',
                     edit: true,
                     list: true,
                     create: true,
@@ -56,8 +57,8 @@
                     maxlength: '50',
                     sequenceNumber: 2
                 },
-                Station: {
-                    title: 'Station',
+                Pallytaree: {
+                    title: 'Pallytaree',
                     edit: true,
                     list: true,
                     create: true,
@@ -65,8 +66,8 @@
                     maxlength: '50',
                     sequenceNumber: 3
                 },
-                Destination: {
-                    title: 'Destination',
+                ToolTax: {
+                    title: 'ToolTax',
                     edit: true,
                     list: true,
                     create: true,
@@ -74,8 +75,17 @@
                     maxlength: '50',
                     sequenceNumber: 4
                 },
-                Quantity: {
-                    title: 'Quantity',
+                ContPort: {
+                    title: 'ContPort',
+                    edit: true,
+                    list: true,
+                    create: true,
+                    width: '10%',
+                    maxlength: '50',
+                    sequenceNumber: 4
+                },
+                Munshiana: {
+                    title: 'Munshiana',
                     edit: true,
                     list: true,
                     create: true,
@@ -83,8 +93,8 @@
                     maxlength: '50',
                     sequenceNumber: 5
                 },
-                Scale: {
-                    title: 'Scale',
+                MiscCashLoan: {
+                    title: 'Misc Cash Loan',
                     edit: true,
                     list: true,
                     create: true,
@@ -92,8 +102,8 @@
                     maxlength: '50',
                     sequenceNumber: 6
                 },
-                Freight: {
-                    title: 'Freight',
+                Food: {
+                    title: 'Food',
                     edit: true,
                     list: true,
                     create: true,
@@ -101,16 +111,95 @@
                     maxlength: '50',
                     sequenceNumber: 7
                 },
-                paidOrNot: {
-                    title: 'Paid Or Not',
+                Godown: {
+                    title: 'Godown',
                     edit: true,
                     list: true,
-                    options: { 'paid': 'Paid', 'not_paid': 'Not Paid' },
-                    type:'radiobutton',
                     create: true,
                     width: '10%',
                     maxlength: '50',
                     sequenceNumber: 8
+                },
+                Tyre: {
+                    title: 'Tyre',
+                    edit: true,
+                    list: true,
+                    create: true,
+                    width: '10%',
+                    maxlength: '50',
+                    sequenceNumber: 9
+                },
+                Accident: {
+                    title: 'Accident',
+                    edit: true,
+                    list: true,
+                    create: true,
+                    width: '10%',
+                    maxlength: '50',
+                    sequenceNumber: 10
+                },
+                Police: {
+                    title: 'Police',
+                    edit: true,
+                    list: true,
+                    create: true,
+                    width: '10%',
+                    maxlength: '50',
+                    sequenceNumber: 11
+                },
+                PartsMaint: {
+                    title: 'Parts Maint',
+                    edit: true,
+                    list: true,
+                    create: true,
+                    width: '10%',
+                    maxlength: '50',
+                    sequenceNumber: 12
+                },
+                LabourMaint: {
+                    title: 'Labour Maint',
+                    edit: true,
+                    list: true,
+                    create: true,
+                    width: '10%',
+                    maxlength: '50',
+                    sequenceNumber: 13
+                },
+                Salary: {
+                    title: 'Salary',
+                    edit: true,
+                    list: true,
+                    create: true,
+                    width: '10%',
+                    maxlength: '50',
+                    sequenceNumber: 14
+                },
+                Misc1: {
+                    title: 'Misc1',
+                    edit: true,
+                    list: true,
+                    create: true,
+                    width: '10%',
+                    maxlength: '50',
+                    sequenceNumber: 15
+                },
+                Misc2: {
+                    title: 'Misc2',
+                    edit: true,
+                    list: true,
+                    create: true,
+                    width: '10%',
+                    maxlength: '50',
+                    sequenceNumber: 16
+                },
+                Misc3: {
+                    title: 'Misc3',
+                    edit: true,
+                    list: true,
+                    create: true,
+                    width: '10%',
+                    maxlength: '50',
+                    sequenceNumber: 17
                 },
             },
             formCreated: function (event, data) {
@@ -131,11 +220,11 @@
                 $(".formError").css('display', 'none');
                 // $('#UserTableContainer').jtable('load', { Id: indexId });
             },
-            addRecordButton: $('#addrecord-AddBuiltyContainer')
+            addRecordButton: $('#addrecord-AddExpensesContainer')
 
         });
 
-        $('#AddBuiltyContainer').jtable('load');
+        $('#AddExpensesContainer').jtable('load');
 
     };
 

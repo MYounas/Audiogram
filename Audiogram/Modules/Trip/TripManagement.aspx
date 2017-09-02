@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Audiogram.Master" AutoEventWireup="true" CodeBehind="TripManagement.aspx.cs" Inherits="Audiogram.Modules.Trips.TripManagement" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Audiogram.Master" AutoEventWireup="true" CodeBehind="TripManagement.aspx.cs" Inherits="Audiogram.Modules.Trip.TripManagement" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 

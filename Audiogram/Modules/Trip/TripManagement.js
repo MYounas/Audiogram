@@ -127,7 +127,7 @@
                     list: true,
                     display: function (data) {
                         if (data.record) {
-                            return '<a target="_blank" href="./AddLubricant.aspx?id=' + data.record.ID + '";>Expenses</a>';
+                            return '<a target="_blank" href="./AddExpenses.aspx?id=' + data.record.ID + '";>Expenses</a>';
                         }
                     }
                 },
@@ -140,7 +140,7 @@
                     list: true,
                     display: function (data) {
                         if (data.record) {
-                            return '<a target="_blank" href="./AddLubricant.aspx?id=' + data.record.ID + '";>Settlement</a>';
+                            return '<a target="_blank" href="./AddSettlement.aspx?id=' + data.record.ID + '";>Settlement</a>';
                         }
                     }
                 },
@@ -209,20 +209,6 @@
                         }
                     }
                 },
-
-                //CustomAction8: {
-                //    title: '',
-                //    //width: '1%',
-                //    sorting: false,
-                //    create: false,
-                //    edit: false,
-                //    list: true,
-                //    display: function (data) {
-                //        if (data.record) {
-                //            return '<a target="_blank" href="./AddTire.aspx/UpdateRecord";>Expenses1</a>';
-                //        }
-                //    }
-                //}
             },
             formCreated: function (event, data) {
                 if (indexId === ' ') {

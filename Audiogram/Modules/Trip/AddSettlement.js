@@ -51,8 +51,8 @@ _this = new (function _userManagement() {
                     edit: true,
                     list: true,
                     create: true,
-                    type: 'date',
-                    displayFormat: 'yy-mm-dd',
+                    //type: 'date',
+                    //displayFormat: 'yy-mm-dd',
                     width: '10%',
                     maxlength: '50',
                     sequenceNumber: 2

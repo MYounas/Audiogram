@@ -21,7 +21,7 @@
 </style>
 
 <%--<asp:ScriptManager ID="ScriptManager2" runat="server"></asp:ScriptManager>--%>
-<script src='<%=ResolveUrl("Addbuilty.js")%>' type="text/javascript"></script>
+<script src='<%=ResolveUrl("AddBuilty.js")%>' type="text/javascript"></script>
 <!-- Section start here -->
 <section class="section-content">
 
@@ -35,7 +35,7 @@
                             <div class="form-group">
                                 <fieldset class="fset fset-item">
                                     <legend class="fset-title">&nbsp;<i class="fa fa-lg fa-cogs"></i>&nbsp;
-                                            Add Lubricant Oil
+                                            Add Builty
                                     </legend>
                                     <div class="form-horizontal col-lg-8">
 
@@ -69,13 +69,13 @@
                             <div class="form-group">
                                 <fieldset class="fset fset-item">
 
-                                    <legend class="fset-title">Lubricant And Oil List</legend>
+                                    <legend class="fset-title">Builty List</legend>
                                     <div class="bg-blue-legend clearfix">
-                                        <div id="addrecord-AddLubricantContainer" class="btn btn-primary addrecord-btn margin-top-5" title="Click on this button to add a new Record">Add New Lubricant & Oil Record </div>
+                                        <div id="addrecord-AddBuiltyContainer" class="btn btn-primary addrecord-btn margin-top-5" title="Click on this button to add a new Record">Add New Builty Record </div>
                                     </div>
 
                                     <div class="jtable-wrap">
-                                        <table id="AddLubricantContainer" class="AddLubricantContainer full-width" style="height: auto;">
+                                        <table id="AddBuiltyContainer" class="AddBuiltyContainer full-width" style="height: auto;">
                                         </table>
                                     </div>
 

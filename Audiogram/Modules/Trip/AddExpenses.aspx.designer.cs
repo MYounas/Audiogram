@@ -10,87 +10,87 @@
 namespace Audiogram.Modules.Trip {
     
     
-    public partial class StartTrip {
+    public partial class AddExpenses {
         
         /// <summary>
-        /// ScriptManager1 control.
+        /// ScriptManager4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        protected global::System.Web.UI.ScriptManager ScriptManager4;
         
         /// <summary>
-        /// pnlNewTest0 control.
+        /// pnlNewTest3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlNewTest0;
+        protected global::System.Web.UI.WebControls.Panel pnlNewTest3;
         
         /// <summary>
-        /// drpVehicle control.
+        /// drpTrip control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpVehicle;
+        protected global::System.Web.UI.WebControls.DropDownList drpTrip;
         
         /// <summary>
-        /// drpFirstDriver control.
+        /// ScriptManager3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpFirstDriver;
+        protected global::System.Web.UI.ScriptManager ScriptManager3;
         
         /// <summary>
-        /// drpSecondDriver control.
+        /// pnlNewTest2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpSecondDriver;
+        protected global::System.Web.UI.WebControls.Panel pnlNewTest2;
         
         /// <summary>
-        /// startDate control.
+        /// DropDownList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl startDate;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
         
         /// <summary>
-        /// txtRouteDetail control.
+        /// ScriptManager2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtRouteDetail;
+        protected global::System.Web.UI.ScriptManager ScriptManager2;
         
         /// <summary>
-        /// AddBuilty control.
+        /// pnlNewTest1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Audiogram.Modules.Trip.AddBuilty AddBuilty;
+        protected global::System.Web.UI.WebControls.Panel pnlNewTest1;
         
         /// <summary>
-        /// btnStart control.
+        /// DropDownList2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnStart;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
     }
 }

@@ -85,7 +85,7 @@ namespace Audiogram.Modules.Trip
                 trip.StartDate = Convert.ToDateTime(startDate.Value);
                 trip.RouteDetail = txtRouteDetail.Value;
 
-                SetExpensesAndSettlements(trip);
+                //SetExpensesAndSettlements(trip);
                 TripRepository.CreateTrip(trip);
 
                 clear();
@@ -105,50 +105,50 @@ namespace Audiogram.Modules.Trip
 
         }
 
-        private void SetExpensesAndSettlements(DataAccess.Model.Trip trip)
-        {
-            foreach (Control c in pnlexpenes.Controls)
-            {
-                if (c is TextBox)
-                {
-                    string property = c.ID.Replace("txt", "");
-                    TextBox txtBox = (TextBox)c;
-                    trip[property] = Utility.GetSafeInteger(txtBox.Text);
-                }
-            }
+        //private void SetExpensesAndSettlements(DataAccess.Model.Trip trip)
+        //{
+        //    foreach (Control c in pnlexpenes.Controls)
+        //    {
+        //        if (c is TextBox)
+        //        {
+        //            string property = c.ID.Replace("txt", "");
+        //            TextBox txtBox = (TextBox)c;
+        //            trip[property] = Utility.GetSafeInteger(txtBox.Text);
+        //        }
+        //    }
 
-            foreach (Control c in pnlsettlement.Controls)
-            {
-                if (c is TextBox)
-                {
-                    string property = c.ID.Replace("txt", "");
-                    TextBox txtBox = (TextBox)c;
-                    trip[property] = Utility.GetSafeInteger(txtBox.Text);
-                }
-            }
-        }
+        //    foreach (Control c in pnlsettlement.Controls)
+        //    {
+        //        if (c is TextBox)
+        //        {
+        //            string property = c.ID.Replace("txt", "");
+        //            TextBox txtBox = (TextBox)c;
+        //            trip[property] = Utility.GetSafeInteger(txtBox.Text);
+        //        }
+        //    }
+        //}
 
         protected void clear()
         {
-            drpVehicle.SelectedIndex = drpFirstDriver.SelectedIndex = drpSecondDriver.SelectedIndex = 0;
-            txtRouteDetail.Value = "";
-            foreach (Control c in pnlexpenes.Controls)
-            {
-                if (c is TextBox)
-                {
-                    TextBox txtBox = (TextBox)c;
-                    txtBox.Text = "0";
-                }
-            }
+            //drpVehicle.SelectedIndex = drpFirstDriver.SelectedIndex = drpSecondDriver.SelectedIndex = 0;
+            //txtRouteDetail.Value = "";
+            //foreach (Control c in pnlexpenes.Controls)
+            //{
+            //    if (c is TextBox)
+            //    {
+            //        TextBox txtBox = (TextBox)c;
+            //        txtBox.Text = "0";
+            //    }
+            //}
 
-            foreach (Control c in pnlsettlement.Controls)
-            {
-                if (c is TextBox)
-                {
-                    TextBox txtBox = (TextBox)c;
-                    txtBox.Text = "0";
-                }
-            }
+            //foreach (Control c in pnlsettlement.Controls)
+            //{
+            //    if (c is TextBox)
+            //    {
+            //        TextBox txtBox = (TextBox)c;
+            //        txtBox.Text = "0";
+            //    }
+            //}
         }
 
 

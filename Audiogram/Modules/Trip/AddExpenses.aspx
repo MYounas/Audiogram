@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Audiogram.Master" AutoEventWireup="true" CodeBehind="AddSettlement.aspx.cs" Inherits="Audiogram.Modules.Trip.AddSettlement" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Audiogram.Master" AutoEventWireup="true" CodeBehind="AddExpenses.aspx.cs" Inherits="Audiogram.Modules.Trip.AddExpenses" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
@@ -21,7 +21,7 @@
     </style>
 
     <asp:ScriptManager ID="ScriptManager4" runat="server"></asp:ScriptManager>
-    <script src='<%=ResolveUrl("AddSettlement.js")%>' type="text/javascript"></script>
+    <script src='<%=ResolveUrl("AddExpenses.js")%>' type="text/javascript"></script>
     <!-- Section start here -->
     <section class="section-content">
 
@@ -35,7 +35,7 @@
                                 <div class="form-group">
                                     <fieldset class="fset fset-item">
                                         <legend class="fset-title">&nbsp;<i class="fa fa-lg fa-cogs"></i>&nbsp;
-                                            Add Settlement Details
+                                            Add Expenses
                                         </legend>
                                         <div class="form-horizontal col-lg-8">
 
@@ -62,20 +62,20 @@
         <div class="content-wrap">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12 padding-top">
-                    <!-- Settlement section start here -->
+                    <!-- Expenses section start here -->
                     <div class="col-md-12 col-sm-12 col-xs-12  no-padding-left no-padding-right">
                         <div class="box panel-body no-padding border-top-blue">
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 <div class="form-group">
                                     <fieldset class="fset fset-item">
 
-                                        <legend class="fset-title">Settlement Details List</legend>
+                                        <legend class="fset-title">Expenses Details List</legend>
                                         <div class="bg-blue-legend clearfix">
-                                            <div id="addrecord-AddSettlementContainer" class="btn btn-primary addrecord-btn margin-top-5" title="Click on this button to add a new Record">Add New Settlement</div>
+                                            <div id="addrecord-AddExpensesContainer" class="btn btn-primary addrecord-btn margin-top-5" title="Click on this button to add a new Record">Add New Expenses</div>
                                         </div>
 
                                         <div class="jtable-wrap">
-                                            <table id="AddSettlementContainer" class="AddSettlementContainer full-width" style="height: auto;">
+                                            <table id="AddExpensesContainer" class="AddExpensesContainer full-width" style="height: auto;">
                                             </table>
                                         </div>
 
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Settlement section close here -->
+                    <!-- Expenses section close here -->
                 </div>
             </div>
         </div>
