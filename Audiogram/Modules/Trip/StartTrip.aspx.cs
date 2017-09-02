@@ -81,7 +81,7 @@ namespace Audiogram.Modules.Trips
                 DataAccess.Model.Trip trip = new DataAccess.Model.Trip();
                 trip.VehicleID = Convert.ToInt32(drpVehicle.SelectedValue);
                 trip.FirstDriverID = Convert.ToInt32(drpFirstDriver.SelectedValue);
-                trip.SecondDriverID = Convert.ToInt32(drpSecondDriver.SelectedValue);
+                //trip.SecondDriverID = Convert.ToInt32(drpSecondDriver.SelectedValue);
                 trip.StartDate = Convert.ToDateTime(startDate.Value);
                 trip.RouteDetail = txtRouteDetail.Value;
 

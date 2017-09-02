@@ -92,6 +92,7 @@
                     create: true,
                     width: '10%',
                     maxlength: '50',
+                    type: 'textarea',
                     sequenceNumber: 6
                 },
             },

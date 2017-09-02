@@ -42,7 +42,7 @@ namespace Audiogram.Modules.Managment
         public static object RecordList(int jtStartIndex, int jtPageSize, string jtSorting)
         {
             int recordTo = jtPageSize + jtStartIndex;
-            return LORepository.GetLOList(TripId, jtStartIndex, jtSorting, recordTo);
+            return BuiltyRepository.GetBuiltyList(TripId, jtStartIndex, jtSorting, recordTo);
 
         }
 
@@ -55,22 +55,22 @@ namespace Audiogram.Modules.Managment
         //}
 
         [WebMethod(EnableSession = true)]
-        public static object CreateRecord(LubricantOil record)
+        public static object CreateRecord(Builty record)
         {
             record.TripId = TripId;
-            return LORepository.CreateLO(record);
+            return BuiltyRepository.CreateBuilty(record);
         }
 
         [WebMethod(EnableSession = true)]
-        public static object UpdateRecord(LubricantOil record)
+        public static object UpdateRecord(Builty record)
         {
-            return LORepository.UpdateLO(record);
+            return BuiltyRepository.UpdateBuilty(record);
         }
 
         [WebMethod(EnableSession = true)]
         public static object DeleteRecord(int ID)
         {
-            return LORepository.DeleteLO(ID);
+            return BuiltyRepository.DeleteBuilty(ID);
         }
 
         protected void drpTrip_SelectedIndexChanged(object sender, EventArgs e)
