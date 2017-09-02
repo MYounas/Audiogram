@@ -21,7 +21,7 @@ using MathWorks.MATLAB.NET.Utility;
 using Audiogram.DataAccess.Model;
 
 
-namespace Audiogram.Modules.Trips
+namespace Audiogram.Modules.Trip
 {
     public partial class StartTrip : System.Web.UI.Page
     {

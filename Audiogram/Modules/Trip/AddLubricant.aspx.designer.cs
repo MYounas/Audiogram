@@ -7,11 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Audiogram.Modules.Managment {
-
-
-    public partial class AddLubricant
-    {
+namespace Audiogram.Modules.Trip {
+    
+    
+    public partial class AddLubricant {
         
         /// <summary>
         /// ScriptManager2 control.

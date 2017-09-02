@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Audiogram.Modules.Managment {
+namespace Audiogram.Modules.Trip {
     
     
     public partial class AddBuilty {

@@ -8,7 +8,7 @@ using Audiogram.DataAccess.Model;
 
 namespace Audiogram.Modules.Trip
 {
-    public partial class AddBuilty : System.Web.UI.UserControl
+    public partial class AddSettlement : Page
     {
 
         static int TripId;
@@ -42,7 +42,8 @@ namespace Audiogram.Modules.Trip
         public static object RecordList(int jtStartIndex, int jtPageSize, string jtSorting)
         {
             int recordTo = jtPageSize + jtStartIndex;
-            return BuiltyRepository.GetBuiltyList(TripId, jtStartIndex, jtSorting, recordTo);
+            //return CTDRepository.GetCTDList(TripId);
+            return SettlementRepository.GetSettlementList(TripId, jtStartIndex, jtSorting, recordTo);
 
         }
 
@@ -50,27 +51,27 @@ namespace Audiogram.Modules.Trip
         //public static object RecordList()
         //{
         //    //int recordTo = jtPageSize + jtStartIndex;
-        //    return LORepository.GetLOList(TripId);
+        //    return DACLRepository.GetDACLList(TripId);
 
         //}
 
         [WebMethod(EnableSession = true)]
-        public static object CreateRecord(Builty record)
+        public static object CreateRecord(Settlement record)
         {
             record.TripId = TripId;
-            return BuiltyRepository.CreateBuilty(record);
+            return SettlementRepository.CreateSettlement(record);
         }
 
         [WebMethod(EnableSession = true)]
-        public static object UpdateRecord(Builty record)
+        public static object UpdateRecord(Settlement record)
         {
-            return BuiltyRepository.UpdateBuilty(record);
+            return SettlementRepository.UpdateSettlement(record);
         }
 
         [WebMethod(EnableSession = true)]
         public static object DeleteRecord(int ID)
         {
-            return BuiltyRepository.DeleteBuilty(ID);
+            return SettlementRepository.DeleteSettlement(ID);
         }
 
         protected void drpTrip_SelectedIndexChanged(object sender, EventArgs e)

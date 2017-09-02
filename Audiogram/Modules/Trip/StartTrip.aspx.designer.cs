@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Audiogram.Modules.Trips {
+namespace Audiogram.Modules.Trip {
     
     
     public partial class StartTrip {
@@ -334,7 +334,7 @@ namespace Audiogram.Modules.Trips {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Audiogram.Modules.Managment.AddBuilty AddBuilty;
+        protected global::Audiogram.Modules.Trip.AddBuilty AddBuilty;
         
         /// <summary>
         /// btnStart control.

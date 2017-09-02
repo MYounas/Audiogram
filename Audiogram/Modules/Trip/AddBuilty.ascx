@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AddBuilty.ascx.cs" Inherits="Audiogram.Modules.Managment.AddBuilty" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AddBuilty.ascx.cs" Inherits="Audiogram.Modules.Trip.AddBuilty" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 

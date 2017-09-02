@@ -7,29 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Audiogram.Modules.Managment {
+namespace Audiogram.Modules.Trip {
     
     
     public partial class AddDACL {
-
+        
         /// <summary>
-        /// ScriptManager2 control.
+        /// ScriptManager3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager ScriptManager3;
-
+        
         /// <summary>
-        /// pnlNewTest1 control.
+        /// pnlNewTest2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlNewTest2;
-
+        
         /// <summary>
         /// drpTrip control.
         /// </summary>

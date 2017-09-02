@@ -202,6 +202,8 @@
     <Content Include="Modules\Trip\AddDACL.js" />
     <Content Include="Modules\Trip\AddLubricant.aspx" />
     <Content Include="Modules\Trip\AddLubricant.js" />
+    <Content Include="Modules\Trip\AddSettlement.aspx" />
+    <Content Include="Modules\Trip\AddSettlement.js" />
     <Content Include="Modules\Trip\BasicTrip.ascx" />
     <Content Include="Modules\Trip\Expenses_Settlement.ascx" />
     <Content Include="Modules\Trip\printReport.js" />
@@ -610,6 +612,13 @@
     </Compile>
     <Compile Include="Modules\Trip\AddLubricant.aspx.designer.cs">
       <DependentUpon>AddLubricant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Trip\AddSettlement.aspx.cs">
+      <DependentUpon>AddSettlement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Trip\AddSettlement.aspx.designer.cs">
+      <DependentUpon>AddSettlement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\Trip\BasicTrip.ascx.cs">
       <DependentUpon>BasicTrip.ascx</DependentUpon>

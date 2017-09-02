@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Audiogram.Master" AutoEventWireup="true" CodeBehind="AddDACL.aspx.cs" Inherits="Audiogram.Modules.Trip.AddDACL" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Audiogram.Master" AutoEventWireup="true" CodeBehind="AddSettlement.aspx.cs" Inherits="Audiogram.Modules.Trip.AddSettlement" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
@@ -20,13 +20,13 @@
         }
     </style>
 
-    <asp:ScriptManager ID="ScriptManager3" runat="server"></asp:ScriptManager>
-    <script src='<%=ResolveUrl("AddDACL.js")%>' type="text/javascript"></script>
+    <asp:ScriptManager ID="ScriptManager4" runat="server"></asp:ScriptManager>
+    <script src='<%=ResolveUrl("AddSettlement.js")%>' type="text/javascript"></script>
     <!-- Section start here -->
     <section class="section-content">
 
         <div class="content-wrap">
-            <asp:Panel ID="pnlNewTest2" runat="server" Visible="true">
+            <asp:Panel ID="pnlNewTest3" runat="server" Visible="true">
                 <div class="col-md-12 col-sm-12 col-xs-12 padding-top">
                     <div class="col-md-12 col-sm-12 col-xs-12  no-padding-left no-padding-right">
                         <div class="box panel-body no-padding border-top-blue">
@@ -35,7 +35,7 @@
                                 <div class="form-group">
                                     <fieldset class="fset fset-item">
                                         <legend class="fset-title">&nbsp;<i class="fa fa-lg fa-cogs"></i>&nbsp;
-                                            Add Diesel And Casl Loan
+                                            Add Cash Transaction Details
                                         </legend>
                                         <div class="form-horizontal col-lg-8">
 
@@ -69,13 +69,13 @@
                                 <div class="form-group">
                                     <fieldset class="fset fset-item">
 
-                                        <legend class="fset-title">Diesel And Casl Loan List</legend>
+                                        <legend class="fset-title">Settlement Details List</legend>
                                         <div class="bg-blue-legend clearfix">
-                                            <div id="addrecord-AddDACLContainer" class="btn btn-primary addrecord-btn margin-top-5" title="Click on this button to add a new Record">Add New Diesel And Cash Loan </div>
+                                            <div id="addrecord-AddSettlementContainer" class="btn btn-primary addrecord-btn margin-top-5" title="Click on this button to add a new Record">Add New Settlement</div>
                                         </div>
 
                                         <div class="jtable-wrap">
-                                            <table id="AddDACLContainer" class="AddDACLContainer full-width" style="height: auto;">
+                                            <table id="AddSettlementContainer" class="AddSettlementContainer full-width" style="height: auto;">
                                             </table>
                                         </div>
 

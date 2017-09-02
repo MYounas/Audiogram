@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Audiogram.Modules.Trips {
+namespace Audiogram.Modules.Trip {
     
     
     public partial class TripManagement {
