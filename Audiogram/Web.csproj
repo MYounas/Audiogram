@@ -186,18 +186,26 @@
     <Content Include="Modules\Common\css\style.css" />
     <Content Include="Modules\Management\AddTire.aspx" />
     <Content Include="Modules\Management\AddTire.js" />
+    <Content Include="Modules\Management\OilManagement.aspx" />
+    <Content Include="Modules\Management\OilManagement.js" />
     <Content Include="Modules\Management\PumpManagement.aspx" />
     <Content Include="Modules\Management\PumpManagement.js" />
     <Content Include="Modules\Management\DriverManagement.aspx" />
     <Content Include="Modules\Management\DriverManagement.js" />
     <Content Include="Modules\Management\VehicleManagement.aspx" />
     <Content Include="Modules\Management\VehicleManagement.js" />
+    <Content Include="Modules\Trip\AddBuilty.aspx" />
+    <Content Include="Modules\Trip\AddBuilty.js" />
     <Content Include="Modules\Trip\AddCTD.aspx" />
     <Content Include="Modules\Trip\AddCTD.js" />
     <Content Include="Modules\Trip\AddDACL.aspx" />
     <Content Include="Modules\Trip\AddDACL.js" />
+    <Content Include="Modules\Trip\AddExpenses.aspx" />
+    <Content Include="Modules\Trip\AddExpenses.js" />
     <Content Include="Modules\Trip\AddLubricant.aspx" />
     <Content Include="Modules\Trip\AddLubricant.js" />
+    <Content Include="Modules\Trip\AddSettlement.aspx" />
+    <Content Include="Modules\Trip\AddSettlement.js" />
     <Content Include="Modules\Trip\BasicTrip.ascx" />
     <Content Include="Modules\Trip\Expenses_Settlement.ascx" />
     <Content Include="Modules\Trip\printReport.js" />
@@ -551,6 +559,13 @@
     <Compile Include="Modules\Management\AddTire.aspx.designer.cs">
       <DependentUpon>AddTire.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Management\OilManagement.aspx.cs">
+      <DependentUpon>OilManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Management\OilManagement.aspx.designer.cs">
+      <DependentUpon>OilManagement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Management\PumpManagement.aspx.cs">
       <DependentUpon>PumpManagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -572,6 +587,13 @@
     <Compile Include="Modules\Management\VehicleManagement.aspx.designer.cs">
       <DependentUpon>VehicleManagement.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Trip\AddBuilty.aspx.cs">
+      <DependentUpon>AddBuilty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Trip\AddBuilty.aspx.designer.cs">
+      <DependentUpon>AddBuilty.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Trip\AddCTD.aspx.cs">
       <DependentUpon>AddCTD.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -586,12 +608,26 @@
     <Compile Include="Modules\Trip\AddDACL.aspx.designer.cs">
       <DependentUpon>AddDACL.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Trip\AddExpenses.aspx.cs">
+      <DependentUpon>AddExpenses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Trip\AddExpenses.aspx.designer.cs">
+      <DependentUpon>AddExpenses.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Trip\AddLubricant.aspx.cs">
       <DependentUpon>AddLubricant.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Modules\Trip\AddLubricant.aspx.designer.cs">
       <DependentUpon>AddLubricant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Trip\AddSettlement.aspx.cs">
+      <DependentUpon>AddSettlement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Trip\AddSettlement.aspx.designer.cs">
+      <DependentUpon>AddSettlement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\Trip\BasicTrip.ascx.cs">
       <DependentUpon>BasicTrip.ascx</DependentUpon>

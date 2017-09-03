@@ -30,7 +30,6 @@
 
 
     <section class="section-content">
-
         <uc1:BasicTrip runat="server" id="BasicTrip1" />
 
         <div class="col-sm-6 col-md-6">

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Audiogram.Master" AutoEventWireup="true" CodeBehind="TripManagement.aspx.cs" Inherits="Audiogram.Modules.Trips.TripManagement" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Audiogram.Master" AutoEventWireup="true" CodeBehind="TripManagement.aspx.cs" Inherits="Audiogram.Modules.Trip.TripManagement" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
@@ -28,7 +28,7 @@
          <div class="content-wrap">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12 padding-top">
-                    <!-- driver section start here -->
+                    <!-- trip section start here -->
                     <div class="col-md-12 col-sm-12 col-xs-12  no-padding-left no-padding-right">
                         <div class="box panel-body no-padding border-top-blue">
                             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -46,7 +46,7 @@
                                         </div>
                                          
                                         <div class="jtable-wrap">
-                                            <table id="TripTableContainer" class="driverTableContainer full-width" style="height: auto;">
+                                            <table id="TripTableContainer" class="tripTableContainer full-width" style="height: auto;">
                                             </table>
                                         </div>
 
@@ -55,7 +55,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- driver section close here -->
+                    <!-- trip section close here -->
                 </div>
             </div>
         </div>

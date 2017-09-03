@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Audiogram.Modules.Trips {
+namespace Audiogram.Modules.Trip {
     
     
     public partial class StartTrip {
@@ -85,247 +85,67 @@ namespace Audiogram.Modules.Trips {
         protected global::System.Web.UI.WebControls.Panel pnlexpenes;
         
         /// <summary>
-        /// txtFix control.
+        /// txtClient control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFix;
+        protected global::System.Web.UI.WebControls.TextBox txtClient;
         
         /// <summary>
-        /// txtPallytaree control.
+        /// txtStation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPallytaree;
+        protected global::System.Web.UI.WebControls.TextBox txtStation;
         
         /// <summary>
-        /// txtToolTax control.
+        /// txtDestination control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtToolTax;
+        protected global::System.Web.UI.WebControls.TextBox txtDestination;
         
         /// <summary>
-        /// txtContPort control.
+        /// txtQuantity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContPort;
+        protected global::System.Web.UI.WebControls.TextBox txtQuantity;
         
         /// <summary>
-        /// txtMunshiana control.
+        /// txtScale control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMunshiana;
+        protected global::System.Web.UI.WebControls.TextBox txtScale;
         
         /// <summary>
-        /// txtFood control.
+        /// txtFreight control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFood;
+        protected global::System.Web.UI.WebControls.TextBox txtFreight;
         
         /// <summary>
-        /// txtGodown control.
+        /// radiopaidOrNot control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGodown;
-        
-        /// <summary>
-        /// txtTyre control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTyre;
-        
-        /// <summary>
-        /// txtAccident control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAccident;
-        
-        /// <summary>
-        /// txtPolice control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPolice;
-        
-        /// <summary>
-        /// txtPartsMaint control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPartsMaint;
-        
-        /// <summary>
-        /// txtLabourMaint control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLabourMaint;
-        
-        /// <summary>
-        /// txtSalary control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSalary;
-        
-        /// <summary>
-        /// txtMisc1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMisc1;
-        
-        /// <summary>
-        /// txtMisc2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMisc2;
-        
-        /// <summary>
-        /// txtMisc3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMisc3;
-        
-        /// <summary>
-        /// pnlsettlement control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlsettlement;
-        
-        /// <summary>
-        /// txtPreviousPeshgi control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPreviousPeshgi;
-        
-        /// <summary>
-        /// txtCashAdvDeposit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCashAdvDeposit;
-        
-        /// <summary>
-        /// txtPurchoonFrieghtUp control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPurchoonFrieghtUp;
-        
-        /// <summary>
-        /// txtPurchoonFrightReturn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPurchoonFrightReturn;
-        
-        /// <summary>
-        /// txtPumpCashLoan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPumpCashLoan;
-        
-        /// <summary>
-        /// txtMiscCashLoan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMiscCashLoan;
-        
-        /// <summary>
-        /// txtSetMisc1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSetMisc1;
-        
-        /// <summary>
-        /// txtSetMisc2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSetMisc2;
-        
-        /// <summary>
-        /// txtSetMisc3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSetMisc3;
-        
-        /// <summary>
-        /// txtSetMisc4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSetMisc4;
+        protected global::System.Web.UI.WebControls.RadioButtonList radiopaidOrNot;
         
         /// <summary>
         /// btnStart control.

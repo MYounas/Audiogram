@@ -4,3 +4,6 @@
 *.pdb
 *.pdb
 Audiogram.DataAccess/obj/Debug/Audiogram.DataAccess.csproj.FileListAbsolute.txt
+Audiogram.DataAccess/bin/Debug/Audiogram.DataAccess.dll
+Audiogram.DataAccess/bin/Debug/Audiogram.DataAccess.pdb
+Audiogram.DataAccess/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache

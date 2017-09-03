@@ -126,7 +126,10 @@ namespace Audiogram.DataAccess
                 command.Parameters.AddWithValue("@Amount", LO.Amount);
                 command.Parameters.AddWithValue("@TripId", LO.TripId);
                 command.Parameters.AddWithValue("@Remarks", LO.Remarks);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 00040d4974a2d930000de265de705184fd565ab0
 
                 DataRow dataRow = dataTable.NewRow();
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
@@ -184,7 +187,10 @@ namespace Audiogram.DataAccess
                 command.Parameters.AddWithValue("@Qty_Ltr", LO.Qty_Ltr);
                 command.Parameters.AddWithValue("@Amount", LO.Amount);
                 command.Parameters.AddWithValue("@Remarks", LO.Remarks);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 00040d4974a2d930000de265de705184fd565ab0
 
                 DataRow dataRow = dataTable.NewRow();
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);

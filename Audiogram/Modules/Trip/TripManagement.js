@@ -32,9 +32,26 @@
             actions: {
                 listAction: '/Modules/Trip/TripManagement.aspx/RecordList',
                 //createAction: '/Modules/Management/AddTire.aspx/CreateRecord',
-                //updateAction: '/Modules/Management/AddTire.aspx/UpdateRecord',
-                //deleteAction: '/Modules/Management/AddTire.aspx/DeleteRecord'
+                //updateAction: '/Modules/Trip/AddExpenses.aspx/UpdateRecord', //open for testing
+                //deleteAction: '/Modules/Trip/AddExpenses.aspx/UpdateRecord'
+                //updateAction: function (postData, jtParams) {
+                //    return $.Deferred(function ($dfd) {
+                //        $.ajax({
+                //            url: '/AddTire.aspx/UpdateRecord?jtStartIndex=' + jtParams.jtStartIndex + '&jtPageSize=' + jtParams.jtPageSize + '&jtSorting=' + jtParams.jtSorting,
+                //            type: 'GET',
+                //            dataType: 'json',
+                //            data: postData,
+                //            success: function (data) {
+                //                $dfd.resolve(data);
+                //            },
+                //            error: function () {
+                //                $dfd.reject();
+                //            }
+                //        });
+                //    });
+                //},
             },
+            
             
             fields: {
                 ID: {
@@ -103,27 +120,27 @@
                 },
                 CustomAction1: {
                     title: '',
-                    width: '1%',
+                    //width: '1%',
                     sorting: false,
                     create: false,
                     edit: false,
                     list: true,
                     display: function (data) {
                         if (data.record) {
-                            return '<button title="Add Lubricant Oil" class="jtable-command-button jtable-oil-command-button" onclick="LO(' + data.record.ID + ')";><span>Add Lubricant Oil</span></button>';
+                            return '<a target="_blank" href="./AddExpenses.aspx?id=' + data.record.ID + '";>Expenses</a>';
                         }
                     }
                 },
                 CustomAction2: {
                     title: '',
-                    width: '1%',
+                    //width: '1%',
                     sorting: false,
                     create: false,
                     edit: false,
                     list: true,
                     display: function (data) {
                         if (data.record) {
-                            return '<button title="Add Diesal & Cash Loan" class="jtable-command-button jtable-diesal-command-button" onclick="DACL(' + data.record.ID + ')";><span>Add Diesal & Cash Loan</span></button>';
+                            return '<a target="_blank" href="./AddSettlement.aspx?id=' + data.record.ID + '";>Settlement</a>';
                         }
                     }
                 },
@@ -136,7 +153,7 @@
                     list: true,
                     display: function (data) {
                         if (data.record) {
-                            return '<button title="Cash Transaction Detail" class="jtable-command-button jtable-cash-command-button" onclick="CTD(' + data.record.ID + ')";><span>Cash Transaction Detail</span></button>';
+                            return '<button title="Add Lubricant Oil" class="jtable-command-button jtable-oil-command-button" onclick="LO(' + data.record.ID + ')";><span>Add Lubricant Oil</span></button>';
                         }
                     }
                 },
@@ -149,7 +166,7 @@
                     list: true,
                     display: function (data) {
                         if (data.record) {
-                            return '<button title="Print Report" class="jtable-command-button jtable-report-command-button" onclick="report(' + data.record.ID + ')";><span>Print Report</span></button>';
+                            return '<button title="Add Diesal & Cash Loan" class="jtable-command-button jtable-diesal-command-button" onclick="DACL(' + data.record.ID + ')";><span>Add Diesal & Cash Loan</span></button>';
                         }
                     }
                 },
@@ -162,13 +179,39 @@
                     list: true,
                     display: function (data) {
                         if (data.record) {
-                            return '<button title="Edit Trip" class="jtable-command-button jtable-edit-command-button" onclick="report(' + data.record.ID + ')";><span>Edit Trip</span></button>';
+                            return '<button title="Cash Transaction Detail" class="jtable-command-button jtable-cash-command-button" onclick="CTD(' + data.record.ID + ')";><span>Cash Transaction Detail</span></button>';
                         }
                     }
-                }
+                },
+                CustomAction6: {
+                    title: '',
+                    width: '1%',
+                    sorting: false,
+                    create: false,
+                    edit: false,
+                    list: true,
+                    display: function (data) {
+                        if (data.record) {
+                            return '<button title="Print Report" class="jtable-command-button jtable-report-command-button" onclick="report(' + data.record.ID + ')";><span>Print Report</span></button>';
+                        }
+                    }
+                },
+                CustomAction7: {
+                    title: '',
+                    width: '1%',
+                    sorting: false,
+                    create: false,
+                    edit: false,
+                    list: true,
+                    display: function (data) {
+                        if (data.record) {
+                            return '<button title="Edit Trip" class="jtable-command-button jtable-edit-command-button" onclick="EditTrip(' + data.record.ID + ')";><span>Edit Trip</span></button>';
+                        }
+                    }
+                },
             },
             formCreated: function (event, data) {
-                if (indexId == ' ') {
+                if (indexId === ' ') {
                     indexId = 0;
                 }
             
@@ -205,7 +248,7 @@
            // $("#helpTooltip").click(function () { alert("call"); });
 
             $(window).keydown(function (event) {
-                if (event.keyCode == 13) {
+                if (event.keyCode === 13) {
                     event.preventDefault();
                     return false;
                 }

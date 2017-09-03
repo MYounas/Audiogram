@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Audiogram.Modules.Managment {
+namespace Audiogram.Modules.Trip {
     
     
     public partial class AddDACL {
@@ -30,6 +30,7 @@ namespace Audiogram.Modules.Managment {
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlNewTest2;
         
+<<<<<<< HEAD
         /// <summary>
         /// txtDrivers control.
         /// </summary>
@@ -48,6 +49,8 @@ namespace Audiogram.Modules.Managment {
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtVehicle;
         
+=======
+>>>>>>> 00040d4974a2d930000de265de705184fd565ab0
         /// <summary>
         /// txtRouteDetail control.
         /// </summary>

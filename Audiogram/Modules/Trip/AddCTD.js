@@ -112,10 +112,18 @@ _this = new (function _userManagement() {
                 Remarks: {
                     title: 'Remarks',
                     edit: true,
+<<<<<<< HEAD
                     type: 'textarea',
                     list: false,
                     create: true,
                     maxlength: '500',
+=======
+                    list: true,
+                    create: true,
+                    width: '10%',
+                    maxlength: '50',
+                    type:'textarea',
+>>>>>>> 00040d4974a2d930000de265de705184fd565ab0
                     sequenceNumber: 6
                 },
             },

@@ -78,14 +78,14 @@ namespace Audiogram
                 }
                 else
                 {
-                    //Response.Redirect("~/Login.aspx", false);
-                    //Context.ApplicationInstance.CompleteRequest();
+                    Response.Redirect("~/Login.aspx", false);
+                    Context.ApplicationInstance.CompleteRequest();
                 }
             }
             else
             {
-                //Response.Redirect("~/Login.aspx", false);
-                //Context.ApplicationInstance.CompleteRequest();
+                Response.Redirect("~/Login.aspx", false);
+                Context.ApplicationInstance.CompleteRequest();
             }
         }
 

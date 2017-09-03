@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Audiogram.Master" AutoEventWireup="true" CodeBehind="PumpManagement.aspx.cs" Inherits="Audiogram.Modules.Managment.DriverManagement" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Audiogram.Master" AutoEventWireup="true" CodeBehind="PumpManagement.aspx.cs" Inherits="Audiogram.Modules.Managment.PumpManagement" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
@@ -21,7 +21,7 @@
     </style>
 
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-    <script src='<%=ResolveUrl("DriverManagement.js")%>' type="text/javascript"></script>
+    <script src='<%=ResolveUrl("PumpManagement.js")%>' type="text/javascript"></script>
 
     <!-- Section start here -->
     <section class="section-content">
@@ -32,7 +32,7 @@
         <div class="content-wrap">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12 padding-top">
-                    <!-- driver section start here -->
+                    <!-- Pump section start here -->
                     <div class="col-md-12 col-sm-12 col-xs-12  no-padding-left no-padding-right">
                         <div class="box panel-body no-padding border-top-blue">
                             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -44,18 +44,18 @@
                                             <img src="../../../Styles/Images/Help.png" alt="Help" width="18" height="18" /></abbr>
                                         </p>
 
-                                        <legend class="fset-title">Driver</legend>
+                                        <legend class="fset-title">Pump</legend>
                                         <div class="bg-blue-legend clearfix">
-                                            <span title="Type at least 1 alphabet or number to initiate searching. Special characters allowed are: &/-.,*+\!@#$()|~:;">Driver &nbsp&nbsp</span>
+                                            <span title="Type at least 1 alphabet or number to initiate searching. Special characters allowed are: &/-.,*+\!@#$()|~:;">Pump &nbsp&nbsp</span>
                                             <span class="control full-width">
-                                                <asp:TextBox ID="txtAutoCompletedrivers" Style="width: 22%; min-width: 170px; height: 27px !important; padding-left: 0.4%;" runat="server" ClientIDMode="Static" MaxLength="35"></asp:TextBox>
-                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender1" runat="server" FilterType="Numbers, UppercaseLetters, LowercaseLetters,Custom" ValidChars=" .&/-,*+\!@#$()|~:;" TargetControlID="txtAutoCompletedrivers" />
+                                                <asp:TextBox ID="txtAutoCompletepumps" Style="width: 22%; min-width: 170px; height: 27px !important; padding-left: 0.4%;" runat="server" ClientIDMode="Static" MaxLength="35"></asp:TextBox>
+                                                <cc1:FilteredTextBoxExtender ID="FilteredTextBoxExtender1" runat="server" FilterType="Numbers, UppercaseLetters, LowercaseLetters,Custom" ValidChars=" .&/-,*+\!@#$()|~:;" TargetControlID="txtAutoCompletepumps" />
                                             </span>
-                                            <div title="Click on this button to add a new participant" id="addrecord-driverTableContainer" class="btn btn-primary addrecord-btn margin-top-5">Add New Driver</div>
+                                            <div title="Click on this button to add a new participant" id="addrecord-pumpTableContainer" class="btn btn-primary addrecord-btn margin-top-5">Add New Data</div>
                                         </div>
 
                                         <div class="jtable-wrap">
-                                            <table id="DriverTableContainer" class="driverTableContainer full-width" style="height: auto;">
+                                            <table id="PumpTableContainer" class="pumpTableContainer full-width" style="height: auto;">
                                             </table>
                                         </div>
 
@@ -64,7 +64,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- driver section close here -->
+                    <!-- pump section close here -->
                 </div>
             </div>
         </div>

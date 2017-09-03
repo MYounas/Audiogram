@@ -16,10 +16,11 @@ namespace Audiogram.DataAccess
 {
     public class TripRepository
     {
-   
+
+        //public static int CreateTrip(Trip trip)
         public static void CreateTrip(Trip trip)
         {
-
+            int returnId = 0;
             //int IsCreated = 0;
             var connection = DBConnection.GetConnection();
             DataTable dataTable = new DataTable();
@@ -34,6 +35,7 @@ namespace Audiogram.DataAccess
 
                 SqlCommand command = new SqlCommand("usp_CreateTrip", connection);
                 command.CommandType = CommandType.StoredProcedure;
+
                 command.Parameters.AddWithValue("@VehicleID", trip.VehicleID);
                 command.Parameters.AddWithValue("@FirstDriverID", trip.FirstDriverID);
                 command.Parameters.AddWithValue("@SecondDriverID", trip.SecondDriverID);
@@ -72,6 +74,17 @@ namespace Audiogram.DataAccess
                 command.Parameters.AddWithValue("@SetMisc2", trip.SetMisc2);
                 command.Parameters.AddWithValue("@SetMisc3", trip.SetMisc3);
                 command.Parameters.AddWithValue("@SetMisc4", trip.SetMisc4);
+                //command.Parameters.AddWithValue("@No", trip.No);
+                command.Parameters.AddWithValue("@Client", trip.Client);
+                command.Parameters.AddWithValue("@Station", trip.Station);
+                command.Parameters.AddWithValue("@Destination", trip.Destination);
+                command.Parameters.AddWithValue("@Quantity", trip.Quantity);
+                command.Parameters.AddWithValue("@Scale", trip.Scale);
+                command.Parameters.AddWithValue("@Freight", trip.Freight);
+                command.Parameters.AddWithValue("@paidOrNot", trip.paidOrNot);
+
+                //returnId = (int)command.ExecuteScalar();
+
                 DataRow dataRow = dataTable.NewRow();
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
                 dataAdapter.Fill(dataTable);
@@ -90,6 +103,10 @@ namespace Audiogram.DataAccess
                     connection.Close();
                 }
             }
+
+
+            //return returnId;
+
         }
 
         public static object GetTrips(int RecordFrom, string JSorting, int RecordTo)
