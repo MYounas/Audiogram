@@ -76,6 +76,7 @@ namespace Audiogram.Modules.Trip
 
         protected void btnStartTest_Click(object sender, EventArgs e)
         {
+            int retId = 0;
             if (Mode == "Add")
             {
                 DataAccess.Model.Trip trip = new DataAccess.Model.Trip();
@@ -85,7 +86,18 @@ namespace Audiogram.Modules.Trip
                 trip.StartDate = Convert.ToDateTime(startDate.Value);
                 trip.RouteDetail = txtRouteDetail.Value;
 
+                //logic for No
+
+                trip.Client = txtClient.Text;
+                trip.Station = txtStation.Text;
+                trip.Destination = txtDestination.Text;
+                trip.Quantity = txtQuantity.Text;
+                trip.Scale = txtScale.Text;
+                trip.Freight = txtFreight.Text;
+                trip.paidOrNot = radiopaidOrNot.SelectedValue.ToString();
+
                 //SetExpensesAndSettlements(trip);
+                //retId = TripRepository.CreateTrip(trip);
                 TripRepository.CreateTrip(trip);
 
                 clear();
@@ -97,6 +109,7 @@ namespace Audiogram.Modules.Trip
                 ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
 
                 Response.Redirect("TripManagement.aspx", false);
+                //Response.Redirect("AddBuilty.aspx?id=" + retId, false);
             }
             else if (Mode == "Edit")
             {

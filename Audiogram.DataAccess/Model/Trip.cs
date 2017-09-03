@@ -12,7 +12,7 @@ namespace Audiogram.DataAccess.Model
         public DateTime StartDate { get; set; }
         public string RouteDetail { get; set; }
 
-        // Expenses
+        //Expenses
         public int Fix { get; set; }
         public int Pallytaree { get; set; }
         public int ToolTax { get; set; }
@@ -29,7 +29,7 @@ namespace Audiogram.DataAccess.Model
         public int Misc1 { get; set; }
         public int Misc2 { get; set; }
         public int Misc3 { get; set; }
-        
+
         // Settlement
 
         public int PreviousPeshgi { get; set; }
@@ -43,7 +43,25 @@ namespace Audiogram.DataAccess.Model
         public int SetMisc3 { get; set; }
         public int SetMisc4 { get; set; }
 
-        
+        //Builty
+
+        public string No { get; set; }
+
+        public string Client { get; set; }
+
+        public string Station { get; set; }
+
+        public string Destination { get; set; }
+
+        public string Quantity { get; set; }
+
+        public string Scale { get; set; }
+
+        public string Freight { get; set; }
+
+        public string paidOrNot { get; set; }
+
+
 
 
         public object this[string propertyName]

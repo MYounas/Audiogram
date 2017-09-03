@@ -194,7 +194,7 @@
     <Content Include="Modules\Management\DriverManagement.js" />
     <Content Include="Modules\Management\VehicleManagement.aspx" />
     <Content Include="Modules\Management\VehicleManagement.js" />
-    <Content Include="Modules\Trip\AddBuilty.ascx" />
+    <Content Include="Modules\Trip\AddBuilty.aspx" />
     <Content Include="Modules\Trip\AddBuilty.js" />
     <Content Include="Modules\Trip\AddCTD.aspx" />
     <Content Include="Modules\Trip\AddCTD.js" />
@@ -587,12 +587,12 @@
     <Compile Include="Modules\Management\VehicleManagement.aspx.designer.cs">
       <DependentUpon>VehicleManagement.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Trip\AddBuilty.ascx.cs">
-      <DependentUpon>AddBuilty.ascx</DependentUpon>
+    <Compile Include="Modules\Trip\AddBuilty.aspx.cs">
+      <DependentUpon>AddBuilty.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Modules\Trip\AddBuilty.ascx.designer.cs">
-      <DependentUpon>AddBuilty.ascx</DependentUpon>
+    <Compile Include="Modules\Trip\AddBuilty.aspx.designer.cs">
+      <DependentUpon>AddBuilty.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\Trip\AddCTD.aspx.cs">
       <DependentUpon>AddCTD.aspx</DependentUpon>

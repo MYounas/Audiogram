@@ -8,7 +8,7 @@ using Audiogram.DataAccess.Model;
 
 namespace Audiogram.Modules.Trip
 {
-    public partial class AddBuilty : System.Web.UI.UserControl
+    public partial class AddBuilty : Page
     {
 
         static int TripId;

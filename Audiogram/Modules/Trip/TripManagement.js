@@ -32,8 +32,8 @@
             actions: {
                 listAction: '/Modules/Trip/TripManagement.aspx/RecordList',
                 //createAction: '/Modules/Management/AddTire.aspx/CreateRecord',
-                //updateAction: '/Modules/Management/AddTire.aspx/UpdateRecord', //open for testing
-                //deleteAction: '/Modules/Management/AddTire.aspx/DeleteRecord'
+                //updateAction: '/Modules/Trip/AddExpenses.aspx/UpdateRecord', //open for testing
+                //deleteAction: '/Modules/Trip/AddExpenses.aspx/UpdateRecord'
                 //updateAction: function (postData, jtParams) {
                 //    return $.Deferred(function ($dfd) {
                 //        $.ajax({

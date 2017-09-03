@@ -1,11 +1,11 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AddBuilty.ascx.cs" Inherits="Audiogram.Modules.Trip.AddBuilty" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Audiogram.Master" AutoEventWireup="true" CodeBehind="AddBuilty.aspx.cs" Inherits="Audiogram.Modules.Trip.AddBuilty" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
-<%--<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="Server">
-</asp:Content>--%>
+<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
 
-<%--<asp:Content ID="Content1" ContentPlaceHolderID="SitePlaceHolder" runat="server">--%>
+<asp:Content ID="Content1" ContentPlaceHolderID="SitePlaceHolder" runat="server">
 
 <style type="text/css">
     .highlight {
@@ -20,7 +20,7 @@
     }
 </style>
 
-<%--<asp:ScriptManager ID="ScriptManager2" runat="server"></asp:ScriptManager>--%>
+<asp:ScriptManager ID="ScriptManager2" runat="server"></asp:ScriptManager>
 <script src='<%=ResolveUrl("AddBuilty.js")%>' type="text/javascript"></script>
 <!-- Section start here -->
 <section class="section-content">
@@ -92,4 +92,4 @@
     <!-- Body Content start here -->
 
 </section>
-<%--</asp:Content>--%>
+</asp:Content>

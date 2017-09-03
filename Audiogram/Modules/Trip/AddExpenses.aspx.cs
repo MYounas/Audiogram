@@ -78,6 +78,11 @@ namespace Audiogram.Modules.Trip
         {
             TripId = Convert.ToInt32(drpTrip.SelectedValue);
         }
-        
+
+
+        protected void btnStartTest_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("StartTrip.aspx", false);
+        }
     }
 }

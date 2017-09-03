@@ -127,7 +127,6 @@ C:\Users\MY\Desktop\Audiogram\Audiogram\bin\DocumentFormat.OpenXml.xml
 C:\Users\MY\Desktop\Audiogram\Audiogram\obj\Debug\Audiogram.dll
 C:\Users\MY\Desktop\Audiogram\Audiogram\obj\Debug\Audiogram.pdb
 C:\Users\MY\Desktop\Audiogram\Audiogram\obj\Debug\Web.csprojResolveAssemblyReference.cache
-C:\Users\user\Desktop\Audiogram\Audiogram\obj\Debug\Web.csprojResolveAssemblyReference.cache
 C:\Users\user\Desktop\Audiogram\Audiogram\bin\AutoMapper.Net4.dll
 C:\Users\user\Desktop\Audiogram\Audiogram\bin\Audiogram.dll.config
 C:\Users\user\Desktop\Audiogram\Audiogram\bin\Audiogram.dll
@@ -172,3 +171,4 @@ C:\Users\user\Desktop\Audiogram\Audiogram\bin\System.Web.Http.xml
 C:\Users\user\Desktop\Audiogram\Audiogram\bin\System.Web.Http.WebHost.xml
 C:\Users\user\Desktop\Audiogram\Audiogram\obj\Debug\Audiogram.dll
 C:\Users\user\Desktop\Audiogram\Audiogram\obj\Debug\Audiogram.pdb
+C:\Users\user\Desktop\Audiogram\Audiogram\obj\Debug\Web.csprojResolveAssemblyReference.cache
