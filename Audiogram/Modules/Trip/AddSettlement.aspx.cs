@@ -20,6 +20,24 @@ namespace Audiogram.Modules.Trip
                 
                 TripId = Convert.ToInt32(Request.QueryString["id"]);
 
+                List<Settlement> allRecords = SettlementRepository.getSettlementByTripID(TripId);
+                Settlement oneRecord = null;
+                if (allRecords.Count != 0)
+                {
+                    oneRecord = allRecords[0];
+                    txtPreviousPeshgi.Text = oneRecord.PreviousPeshgi.ToString();
+                    txtCashAdvDeposit.Text = oneRecord.CashAdvDeposit.ToString();
+                    txtPurchoonFrieghtUp.Text = oneRecord.PurchoonFrieghtUp.ToString();
+                    txtPurchoonFrightReturn.Text = oneRecord.PurchoonFrightReturn.ToString();
+                    txtPumpCashLoan.Text = oneRecord.PumpCashLoan.ToString();
+                    txtMiscCashLoan.Text = oneRecord.MiscCashLoan.ToString();
+                    txtSetMisc1.Text = oneRecord.SetMisc1.ToString();
+                    txtSetMisc2.Text = oneRecord.SetMisc2.ToString();
+                    txtSetMisc3.Text = oneRecord.SetMisc3.ToString();
+                    txtSetMisc4.Text = oneRecord.SetMisc4.ToString();
+
+                }
+
                 TripRepository repo = new TripRepository();
                 object obj = TripRepository.GetTrips(0, "FirstDriver ASC", 50);
                 List<DataAccess.Model.Trip> lstTrips = ((List<DataAccess.Model.Trip>)obj.GetType().GetProperty("Records").GetValue(obj, null));
@@ -78,6 +96,41 @@ namespace Audiogram.Modules.Trip
         {
             TripId = Convert.ToInt32(drpTrip.SelectedValue);
         }
-        
+
+        protected void btnStartTest_Click(object sender, EventArgs e)
+        {
+
+            List<Settlement> allRecords = SettlementRepository.getSettlementByTripID(TripId);
+            Settlement oneRecord = null;
+            Settlement exp = new Settlement();
+            if (allRecords.Count != 0)
+            {
+                oneRecord = allRecords[0];
+                exp.ID = oneRecord.ID;
+            }
+
+            exp.PreviousPeshgi = Convert.ToInt32(txtPreviousPeshgi.Text);
+            exp.CashAdvDeposit = Convert.ToInt32(txtCashAdvDeposit.Text);
+            exp.PurchoonFrieghtUp = Convert.ToInt32(txtPurchoonFrieghtUp.Text);
+            exp.PurchoonFrightReturn = Convert.ToInt32(txtPurchoonFrightReturn.Text);
+            exp.PumpCashLoan = Convert.ToInt32(txtPumpCashLoan.Text);
+            exp.MiscCashLoan = Convert.ToInt32(txtMiscCashLoan.Text);
+            exp.SetMisc1 = Convert.ToInt32(txtSetMisc1.Text);
+            exp.SetMisc2 = Convert.ToInt32(txtSetMisc2.Text);
+            exp.SetMisc3 = Convert.ToInt32(txtSetMisc3.Text);
+            exp.SetMisc4 = Convert.ToInt32(txtSetMisc4.Text);
+            exp.TripId = TripId;
+
+            if (oneRecord != null)
+            {
+                SettlementRepository.UpdateSettlement(exp);
+            }
+            else
+            {
+                SettlementRepository.CreateSettlement(exp);
+            }
+
+            Response.Redirect("TripManagement.aspx", false);
+        }
     }
 }
