@@ -61,6 +61,49 @@ namespace Audiogram.DataAccess
             }
         }
 
+        public static List<Expenses> getExpensesByTripID(int TripId)
+        {
+            var connection = DBConnection.GetConnection();
+
+            try
+            {
+                if (connection.State != ConnectionState.Open)
+                {
+                    connection.Open();
+                }
+
+                SqlCommand command = new SqlCommand("usp_getExpensesByTripID", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@TripId", TripId);
+                DataSet dataset = new DataSet();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter();
+                dataAdapter.SelectCommand = command;
+                dataAdapter.Fill(dataset);
+                Mapper.CreateMap<IDataReader, Expenses>();
+                IDataReader dataReader = command.ExecuteReader();
+                List<Expenses> lstExpenses = Mapper.Map<List<Expenses>>(dataReader);
+
+                return lstExpenses;
+
+            }
+            catch (Exception ex)
+            {
+                //Logger.logging.log.Error("error:" + ex.Message);
+                //return new { Result = "ERROR", Message = "Could not connect to database. Please contact the System Administrator." };
+                return null;
+            }
+
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+
+
         public static object CreateExpenses(Expenses addedRecord)
         {
 

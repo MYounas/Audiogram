@@ -12,13 +12,36 @@ namespace Audiogram.Modules.Trip
     {
 
         static int TripId;
-
+        static int JI=0, RT = 0; static string JS = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
                 
                 TripId = Convert.ToInt32(Request.QueryString["id"]);
+                List<Expenses> allRecords = ExpensesRepository.getExpensesByTripID(TripId);
+                Expenses oneRecord = null;
+                if (allRecords.Count != 0)
+                {
+                    oneRecord = allRecords[0];
+                    txtFix.Text = oneRecord.Fix.ToString();
+                    txtPallytaree.Text = oneRecord.Pallytaree.ToString();
+                    txtToolTax.Text = oneRecord.ToolTax.ToString();
+                    txtContPort.Text = oneRecord.ContPort.ToString();
+                    txtMunshiana.Text = oneRecord.Munshiana.ToString();
+                    txtFood.Text = oneRecord.Food.ToString();
+                    txtGodown.Text = oneRecord.Godown.ToString();
+                    txtTyre.Text = oneRecord.Tyre.ToString();
+                    txtAccident.Text = oneRecord.Accident.ToString();
+                    txtPolice.Text = oneRecord.Police.ToString();
+                    txtPartsMaint.Text = oneRecord.PartsMaint.ToString();
+                    txtLabourMaint.Text = oneRecord.LabourMaint.ToString();
+                    txtSalary.Text = oneRecord.Salary.ToString();
+                    txtMisc1.Text = oneRecord.Misc1.ToString();
+                    txtMisc2.Text = oneRecord.Misc2.ToString();
+                    txtMisc3.Text = oneRecord.Misc3.ToString();
+
+                }
 
                 TripRepository repo = new TripRepository();
                 object obj = TripRepository.GetTrips(0, "FirstDriver ASC", 50);
@@ -42,18 +65,11 @@ namespace Audiogram.Modules.Trip
         public static object RecordList(int jtStartIndex, int jtPageSize, string jtSorting)
         {
             int recordTo = jtPageSize + jtStartIndex;
-            //return CTDRepository.GetCTDList(TripId);
+            RT = recordTo;JI = jtStartIndex;JS = jtSorting;
             return ExpensesRepository.GetExpensesList(TripId, jtStartIndex, jtSorting, recordTo);
 
         }
-
-        //[WebMethod(EnableSession = true)]
-        //public static object RecordList()
-        //{
-        //    //int recordTo = jtPageSize + jtStartIndex;
-        //    return DACLRepository.GetDACLList(TripId);
-
-        //}
+        
 
         [WebMethod(EnableSession = true)]
         public static object CreateRecord(Expenses record)
@@ -82,7 +98,43 @@ namespace Audiogram.Modules.Trip
 
         protected void btnStartTest_Click(object sender, EventArgs e)
         {
-            Response.Redirect("StartTrip.aspx", false);
+            List<Expenses> allRecords = ExpensesRepository.getExpensesByTripID(TripId);
+            Expenses oneRecord=null;
+            Expenses exp = new Expenses();
+            if (allRecords.Count != 0)
+            {
+                oneRecord = allRecords[0];
+                exp.ID = oneRecord.ID;
+            }
+
+            exp.Fix = Convert.ToInt32(txtFix.Text);
+            exp.Pallytaree = Convert.ToInt32(txtPallytaree.Text);
+            exp.ToolTax = Convert.ToInt32(txtToolTax.Text);
+            exp.ContPort = Convert.ToInt32(txtContPort.Text);
+            exp.Munshiana = Convert.ToInt32(txtMunshiana.Text);
+            exp.Food = Convert.ToInt32(txtFood.Text);
+            exp.Godown = Convert.ToInt32(txtGodown.Text);
+            exp.Tyre = Convert.ToInt32(txtTyre.Text);
+            exp.Accident = Convert.ToInt32(txtAccident.Text);
+            exp.Police = Convert.ToInt32(txtPolice.Text);
+            exp.PartsMaint = Convert.ToInt32(txtPartsMaint.Text);
+            exp.LabourMaint = Convert.ToInt32(txtLabourMaint.Text);
+            exp.Salary = Convert.ToInt32(txtSalary.Text);
+            exp.Misc1 = Convert.ToInt32(txtMisc1.Text);
+            exp.Misc2 = Convert.ToInt32(txtMisc2.Text);
+            exp.Misc3= Convert.ToInt32(txtMisc3.Text);
+            exp.TripId = TripId;
+
+            if (oneRecord != null)
+            {
+                ExpensesRepository.UpdateExpenses(exp);
+            }
+            else
+            {
+                ExpensesRepository.CreateExpenses(exp);
+            }
+
+            Response.Redirect("TripManagement.aspx", false);
         }
     }
 }
