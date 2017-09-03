@@ -57,14 +57,30 @@ _this = new (function _userManagement() {
                     maxlength: '50',
                     sequenceNumber: 2
                 },
-                TrSource: {
+                SourceType: {
                     title: 'Tr.Source',
                     edit: true,
-                    list: true,
+                    options:'/Modules/Trip/AddCTD.aspx/GetSourceType',
                     create: true,
                     width: '10%',
-                    maxlength: '50',
-                    sequenceNumber: 3
+                    sequenceNumber: 3,
+                    list : false
+                },
+                SourceValue: {
+                    title: 'Value',
+                    dependsOn: 'SourceType', //Countries depends on continentals. Thus, jTable builds cascade dropdowns!
+                    options: function (data) {
+                        if (data.source == 'list') {
+                            //Return url of all countries for optimization. 
+                            //This method is called for each row on the table and jTable caches options based on this url.
+                            return '/Modules/Trip/AddCTD.aspx/GetSourceValue?sourceTypeId=0';
+                        }
+
+                        //This code runs when user opens edit/create form or changes continental combobox on an edit/create form.
+                        //data.source == 'edit' || data.source == 'create'
+                        return '/Modules/Trip/AddCTD.aspx/GetSourceValue?sourceTypeId=' + data.dependedValues.SourceType;
+                    },
+                    list: false
                 },
                 TrDetail: {
                     title: 'Tr.Detail',

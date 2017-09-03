@@ -118,7 +118,8 @@ namespace Audiogram.DataAccess
                 SqlCommand command = new SqlCommand("CreateCTD", connection);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@Date", CTD.Date);
-                command.Parameters.AddWithValue("@TrSource", CTD.TrSource);
+                command.Parameters.AddWithValue("@SourceType", CTD.SourceType);
+                command.Parameters.AddWithValue("@SourceValue", CTD.SourceValue);
                 command.Parameters.AddWithValue("@TrDetail", CTD.TrDetail);
                 command.Parameters.AddWithValue("@Debit", CTD.Debit);
                 command.Parameters.AddWithValue("@Credit", CTD.Credit);
@@ -178,7 +179,8 @@ namespace Audiogram.DataAccess
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@ID", CTD.ID);
                 command.Parameters.AddWithValue("@Date", CTD.Date);
-                command.Parameters.AddWithValue("@TrSource", CTD.TrSource);
+                command.Parameters.AddWithValue("@SourceType", CTD.SourceType);
+                command.Parameters.AddWithValue("@SourceValue", CTD.SourceValue);
                 command.Parameters.AddWithValue("@TrDetail", CTD.TrDetail);
                 command.Parameters.AddWithValue("@Debit", CTD.Debit);
                 command.Parameters.AddWithValue("@Credit", CTD.Credit);
@@ -216,7 +218,90 @@ namespace Audiogram.DataAccess
 
 
         }
-   
 
+
+
+        public static object GetSourceType()
+        {
+            var connection = DBConnection.GetConnection();
+
+            try
+            {
+                if (connection.State != ConnectionState.Open)
+                {
+                    connection.Open();
+                }
+
+                SqlCommand command = new SqlCommand("GetSourceType", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                DataSet dataset = new DataSet();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter();
+                dataAdapter.SelectCommand = command;
+                dataAdapter.Fill(dataset);
+                Mapper.CreateMap<IDataReader, DropDownItem>();
+                IDataReader dataReader = command.ExecuteReader();
+                List<DropDownItem> lstSourceType = Mapper.Map<List<DropDownItem>>(dataReader);
+
+                lstSourceType.Insert(0, new DropDownItem(0, "--SELECT--"));
+
+                return new { Result = "OK", Options = lstSourceType};
+
+            }
+            catch (Exception ex)
+            {
+                Logger.logging.log.Error("error:" + ex.Message);
+                return new { Result = "ERROR", Message = "Could not connect to database. Please contact the System Administrator." };
+            }
+
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+        public static object GetSourceValue(int sourceType)
+        {
+            var connection = DBConnection.GetConnection();
+
+            try
+            {
+                if (connection.State != ConnectionState.Open)
+                {
+                    connection.Open();
+                }
+
+                SqlCommand command = new SqlCommand("GetSourceValue", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@SourceType", sourceType);
+                DataSet dataset = new DataSet();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter();
+                dataAdapter.SelectCommand = command;
+                dataAdapter.Fill(dataset);
+                Mapper.CreateMap<IDataReader, DropDownItem>();
+                IDataReader dataReader = command.ExecuteReader();
+                List<DropDownItem> lstSourceValue = Mapper.Map<List<DropDownItem>>(dataReader);
+
+                lstSourceValue.Insert(0, new DropDownItem(0, "--SELECT--"));
+
+                return new { Result = "OK", Options = lstSourceValue };
+
+            }
+            catch (Exception ex)
+            {
+                Logger.logging.log.Error("error:" + ex.Message);
+                return new { Result = "ERROR", Message = "Could not connect to database. Please contact the System Administrator." };
+            }
+
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
     }
 }

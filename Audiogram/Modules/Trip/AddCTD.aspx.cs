@@ -58,6 +58,17 @@ namespace Audiogram.Modules.Managment
 
         }
 
+        [WebMethod(EnableSession = true)]
+        public static object GetSourceType()
+        {
+            return CTDRepository.GetSourceType();
+        }
+
+        [WebMethod(EnableSession = true)]
+        public static object GetSourceValue(int sourceTypeId)
+        {
+            return CTDRepository.GetSourceValue(sourceTypeId);
+        }
         //[WebMethod(EnableSession = true)]
         //public static object RecordList()
         //{
