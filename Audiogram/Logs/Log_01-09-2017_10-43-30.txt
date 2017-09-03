@@ -1,0 +1,88 @@
+2017-09-01 10:43:30,182 INFO  Page Load of Login
+2017-09-01 10:48:11,987 INFO  Page Load of Login
+2017-09-01 10:48:13,786 INFO  Page Load of Login
+2017-09-01 10:48:13,869 INFO  Page Load of Master
+2017-09-01 10:48:16,368 INFO  Page Load of Master
+2017-09-01 10:48:31,288 INFO  Page Load of Master
+2017-09-01 10:48:32,460 INFO  Page Load of Master
+2017-09-01 10:48:32,480 INFO  Page Load of Master
+2017-09-01 10:48:39,430 INFO  Page Load of Master
+2017-09-01 10:52:34,671 INFO  Page Load of Master
+2017-09-01 10:52:48,539 ERROR error:Sequence contains no elements
+2017-09-01 10:52:48,539 INFO  Page Load of Master
+2017-09-01 10:52:49,013 INFO  Page Load of Master
+2017-09-01 10:53:24,631 INFO  Page Load of Master
+2017-09-01 11:46:07,113 INFO  Page Load of Login
+2017-09-01 11:46:08,558 INFO  Page Load of Login
+2017-09-01 11:46:08,571 INFO  Page Load of Master
+2017-09-01 11:46:10,221 INFO  Page Load of Master
+2017-09-01 11:46:12,020 INFO  Page Load of Master
+2017-09-01 11:46:12,082 INFO  Page Load of Master
+2017-09-01 11:46:37,223 INFO  Page Load of Master
+2017-09-01 11:57:35,455 INFO  Page Load of Login
+2017-09-01 11:57:37,598 INFO  Page Load of Login
+2017-09-01 11:57:37,618 INFO  Page Load of Master
+2017-09-01 11:57:40,936 INFO  Page Load of Master
+2017-09-01 11:57:42,642 INFO  Page Load of Master
+2017-09-01 11:57:42,716 INFO  Page Load of Master
+2017-09-01 11:57:45,090 INFO  Page Load of Master
+2017-09-01 11:57:47,220 INFO  Page Load of Master
+2017-09-01 11:57:47,266 INFO  Page Load of Master
+2017-09-01 11:58:58,617 INFO  Page Load of Master
+2017-09-01 11:59:00,216 INFO  Page Load of Master
+2017-09-01 11:59:10,741 INFO  Page Load of Master
+2017-09-01 11:59:12,555 INFO  Page Load of Master
+2017-09-01 11:59:14,658 ERROR error:Sequence contains no elements
+2017-09-01 11:59:14,658 INFO  Page Load of Master
+2017-09-01 11:59:15,133 INFO  Page Load of Master
+2017-09-01 11:59:49,046 INFO  Page Load of Master
+2017-09-01 11:59:52,252 ERROR error:Sequence contains no elements
+2017-09-01 11:59:52,252 INFO  Page Load of Master
+2017-09-01 11:59:52,727 INFO  Page Load of Master
+2017-09-01 12:10:48,366 INFO  Page Load of Login
+2017-09-01 12:10:49,737 INFO  Page Load of Login
+2017-09-01 12:10:49,754 INFO  Page Load of Master
+2017-09-01 12:13:27,325 INFO  Page Load of Master
+2017-09-01 12:13:30,609 INFO  Page Load of Master
+2017-09-01 12:13:31,099 INFO  Page Load of Master
+2017-09-01 12:13:46,603 INFO  Page Load of Master
+2017-09-01 12:13:52,562 INFO  Page Load of Master
+2017-09-01 12:13:53,318 INFO  Page Load of Master
+2017-09-01 12:13:56,705 INFO  Page Load of Master
+2017-09-01 12:21:54,409 INFO  Page Load of Master
+2017-09-01 13:10:11,434 INFO  Page Load of Login
+2017-09-01 13:10:13,254 INFO  Page Load of Login
+2017-09-01 13:10:13,273 INFO  Page Load of Master
+2017-09-01 13:10:15,439 INFO  Page Load of Master
+2017-09-01 13:16:02,367 INFO  Page Load of Master
+2017-09-01 13:16:03,627 INFO  Page Load of Master
+2017-09-01 13:16:23,629 INFO  Page Load of Master
+2017-09-01 13:17:13,032 INFO  Page Load of Master
+2017-09-01 13:17:16,213 INFO  Page Load of Master
+2017-09-01 13:17:18,030 INFO  Page Load of Master
+2017-09-01 13:42:42,970 INFO  Page Load of Login
+2017-09-01 13:42:44,528 INFO  Page Load of Login
+2017-09-01 13:42:44,587 INFO  Page Load of Master
+2017-09-01 13:42:46,118 INFO  Page Load of Master
+2017-09-01 13:43:31,414 INFO  Page Load of Master
+2017-09-01 13:44:25,189 INFO  Page Load of Master
+2017-09-01 13:44:26,294 INFO  Page Load of Master
+2017-09-01 13:44:26,840 INFO  Page Load of Master
+2017-09-01 13:44:31,553 ERROR    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Audiogram.DataAccess.TireRepository.UpdateTire(Tire tire) in C:\Users\user\Desktop\Audiogram\Audiogram.DataAccess\DataAccess\TireRepository.cs:line 221
+2017-09-01 13:44:35,479 INFO  Page Load of Master

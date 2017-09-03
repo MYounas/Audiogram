@@ -74,7 +74,11 @@
   <ItemGroup>
     <Compile Include="Common\Enumeration.cs" />
     <Compile Include="Common\Helper.cs" />
+    <Compile Include="DataAccess\ExpensesRepository.cs" />
+    <Compile Include="DataAccess\SettlementRepository.cs" />
+    <Compile Include="DataAccess\BuiltyRepository.cs" />
     <Compile Include="DataAccess\DACLRepository.cs" />
+    <Compile Include="DataAccess\OilRepository.cs" />
     <Compile Include="DataAccess\PumpRepository.cs" />
     <Compile Include="DataAccess\LORepository.cs" />
     <Compile Include="DataAccess\CTDRepository.cs" />
@@ -93,11 +97,14 @@
     <Compile Include="Logger.cs" />
     <Compile Include="Logging.cs" />
     <Compile Include="Model\CashTransactionDetail.cs" />
+    <Compile Include="Model\Builty.cs" />
     <Compile Include="Model\DiesalAndCashLoan.cs" />
     <Compile Include="Model\DropDownItem.cs" />
     <Compile Include="Model\LubricantOil.cs" />
     <Compile Include="Model\Oil.cs" />
     <Compile Include="Model\Tire.cs" />
+    <Compile Include="Model\Settlement.cs" />
+    <Compile Include="Model\Expenses.cs" />
     <Compile Include="Model\Trip.cs" />
     <Compile Include="Model\Pump.cs" />
     <Compile Include="Model\Vehicle.cs" />

@@ -6,7 +6,7 @@ namespace Audiogram.Model
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public string OilBrand { get; set; }
-        public string Location { get; set; }
+        public string Company { get; set; }
+        public string Type { get; set; }
     }
 }

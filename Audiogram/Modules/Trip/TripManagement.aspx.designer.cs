@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Audiogram.Modules.Trips {
+namespace Audiogram.Modules.Trip {
     
     
     public partial class TripManagement {
@@ -29,6 +29,7 @@ namespace Audiogram.Modules.Trips {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnStart;
+<<<<<<< HEAD
         
         /// <summary>
         /// SelectedId control.
@@ -38,5 +39,7 @@ namespace Audiogram.Modules.Trips {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField SelectedId;
+=======
+>>>>>>> 00040d4974a2d930000de265de705184fd565ab0
     }
 }

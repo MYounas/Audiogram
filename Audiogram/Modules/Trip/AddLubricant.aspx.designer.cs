@@ -7,7 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+<<<<<<< HEAD
 namespace Audiogram.Modules.Managment {
+=======
+namespace Audiogram.Modules.Trip {
+>>>>>>> 00040d4974a2d930000de265de705184fd565ab0
     
     
     public partial class AddLubricant {

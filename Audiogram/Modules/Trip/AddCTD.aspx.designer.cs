@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Audiogram.Modules.Managment {
+namespace Audiogram.Modules.Trip {
     
     
     public partial class AddCTD {
@@ -37,6 +37,7 @@ namespace Audiogram.Modules.Managment {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
+<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.TextBox txtDrivers;
         
         /// <summary>
@@ -56,5 +57,8 @@ namespace Audiogram.Modules.Managment {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea txtRouteDetail;
+=======
+        protected global::System.Web.UI.WebControls.DropDownList drpTrip;
+>>>>>>> 00040d4974a2d930000de265de705184fd565ab0
     }
 }

@@ -6,7 +6,7 @@ using Audiogram.DataAccess;
 using Audiogram.DataAccess.Model;
 
 
-namespace Audiogram.Modules.Managment
+namespace Audiogram.Modules.Trip
 {
     public partial class AddLubricant : Page
     {

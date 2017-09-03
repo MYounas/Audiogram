@@ -15,7 +15,6 @@ namespace Audiogram.DataAccess
 {
     public class VehicleRepository
     {
-
         public static object GetVehicleList(string SearchVehicle, int RecordFrom, string JSorting, int RecordTo,string status = "",bool forDropDown = false)
         {
             string[] words = JSorting.Split(' ');

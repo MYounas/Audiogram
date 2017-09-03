@@ -11,12 +11,15 @@ namespace Audiogram.Modules.Common
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             SessionDetails sd = Session["sessionDetails"] as SessionDetails;
             if (sd != null && sd.UserId != 0)
             {
                 Session["RoleId"] = sd.RoletypeId.ToString();
                 hdnRoleType.Value = sd.RoletypeId.ToString();
             }
+
+
         }
 
         [System.Web.Services.WebMethod]

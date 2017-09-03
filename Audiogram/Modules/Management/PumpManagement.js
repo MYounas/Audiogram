@@ -11,7 +11,7 @@
 
         _this.is_PageLoaded = true;
 
-        $('#DriverTableContainer').jtable({
+        $('#PumpTableContainer').jtable({
 
             columnResizable: false,
             defaultSorting: 'Name ASC',
@@ -23,16 +23,16 @@
             columnSelectable: false,
             timeZoneConversionOnReload: true,
             messages: {
-                deleteConfirmation: 'Are you sure you want to delete driver?',
-                deleteSuccessfully: 'Driver has been deleted successfully.',
-                updateSuccessfully: 'Driver is updated successfully.',
-                addSuccessfully: 'Driver is saved successfully.'
+                deleteConfirmation: 'Are you sure you want to delete Data?',
+                deleteSuccessfully: 'Data has been deleted successfully.',
+                updateSuccessfully: 'Data is updated successfully.',
+                addSuccessfully: 'Data is saved successfully.'
             },
             actions: {
-                listAction: '/Modules/Management/DriverManagement.aspx/RecordList',
-                createAction: '/Modules/Management/DriverManagement.aspx/CreateRecord',
-                updateAction: '/Modules/Management/DriverManagement.aspx/UpdateRecord',
-                deleteAction: '/Modules/Management/DriverManagement.aspx/DeleteRecord'
+                listAction: '/Modules/Management/PumpManagement.aspx/RecordList',
+                createAction: '/Modules/Management/PumpManagement.aspx/CreateRecord',
+                updateAction: '/Modules/Management/PumpManagement.aspx/UpdateRecord',
+                deleteAction: '/Modules/Management/PumpManagement.aspx/DeleteRecord'
             },
             
             fields: {
@@ -54,8 +54,8 @@
                     sequenceNumber: 2
                 },
                
-                FatherName: {
-                    title: 'Father Name:*',
+                Location: {
+                    title: 'Location:*',
                     edit: true,
                     list: true,
                     create: true,
@@ -63,118 +63,26 @@
                     maxlength: '50',
                     sequenceNumber:3
                 },
-                NIC: {
-                    title: 'NIC:',
-                    edit: true,
-                    list: true,
-                    create: true,
-                    width: '11%',
-                    maxlength: '50',
-                    sequenceNumber:4
-                },
-                NICExpiryDate: {
-                    title: 'NIC Expiry Date:',
-                    edit: true,
-                    displayFormat: 'yy-mm-dd',
-                    list: true,
-                    create: true,
-                    type: 'date',
-                    maxDate: 0,
-                    //endDate: new Date(),
-                    sequenceNumber: 5
-                },
-                DOB: {
-                    title: 'Date Of Birth:',
-                    edit: true,
-                    displayFormat: 'yy-mm-dd',
-                    list: true,
-                    create: true,
-                    type: 'date',
-                    maxDate: 0,
-                    //endDate: new Date(),
-                    sequenceNumber: 6
-                },
-                Cell: {
-                    title: 'Cell :',
-                    edit: true,
-                    list: true,
-                    create: true,
-                    width: '11%',
-                    maxlength: '50',
-                    sequenceNumber: 7
-                },
-                License: {
-                    title: 'Driving License :',
-                    edit: true,
-                    list: true,
-                    create: true,
-                    width: '11%',
-                    maxlength: '50',
-                    sequenceNumber: 8
-                },
-                LicenseExpiryDate: {
-                    title: 'License Expiry Date:',
-                    edit: true,
-                    displayFormat: 'yy-mm-dd',
-                    list: true,
-                    create: true,
-                    type: 'date',
-                    maxDate: 0,
-                    //endDate: new Date(),
-                    sequenceNumber: 9
-                },
-                Address: {
-                    title: 'Address:',
-                    list: false,
-                    type: 'textarea',
-                    edit: 'true',
-                    create: 'true',
-                    maxlength: '250',
-                    onpaste: "return global.TextAreaMaxLengthOnPaste(this,'250',event);",
-                    onpress: "return global.TextAreaMaxLength(this,'250',event);",
-                    sequenceNumber:10
-                },
-                CurrentAddress: {
-                    title: 'Current Address:',
-                    list: false,
-                    type: 'textarea',
-                    edit: 'true',
-                    create: 'true',
-                    maxlength: '250',
-                    onpaste: "return global.TextAreaMaxLengthOnPaste(this,'250',event);",
-                    onpress: "return global.TextAreaMaxLength(this,'250',event);",
-                    sequenceNumber: 11
-                },
-                IsActive: {
-                    title: 'Status:',
-                    list: true,
-                    edit: true,
-                    width: '8%',
-                    type: 'checkbox',
-                    defaultValue: 'true',
-                    values: { 'false': 'InActive', 'true': 'Active' },
-                    sequenceNumber: 12,
-                    inputClass: 'subject-edit-status'
-                }
+                
             },
             formCreated: function (event, data) {
-                if (indexId == ' ') {
+                if (indexId === ' ') {
                     indexId = 0;
                 }
             
 
-                data.form.find('input[name="DOB"]').addClass('validate[custom[dateFormat]]');
-                data.form.find('input[name="Name"]').addClass('validate[required,maxSize[50],minSize[4]]');//,custom[onlyLetterNumber]
-                data.form.find('input[name="FatherName"]').addClass('validate[maxSize[50]]');
-                data.form.find('input[name="NIC"]').addClass('validate[maxSize[40]]');
-               data.form.parent().css('width', '340px').css('height', '400px');
+                //data.form.find('input[name="DOB"]').addClass('validate[custom[dateFormat]]');
+                //data.form.find('input[name="Name"]').addClass('validate[required,maxSize[50],minSize[4]]');//,custom[onlyLetterNumber]
+                //data.form.find('input[name="FatherName"]').addClass('validate[maxSize[50]]');
+                //data.form.find('input[name="NIC"]').addClass('validate[maxSize[40]]');
+               //data.form.parent().css('width', '340px').css('height', '400px');
                $(data.form).addClass("custom_horizontal_form_field");
              
                var headerText = $(data.form).parents('.ui-dialog').find('.ui-dialog-title').text() || '';
-               if (headerText == 'Add new record') {
-                   headerText = 'Add New Driver';
-               } else if (headerText == 'Edit Record') {
-                   headerText = 'Edit Driver';
+               if (headerText === 'Add new record') {
+                   headerText = 'Add New record';
+               } else if (headerText === 'Edit Record') {
+                   headerText = 'Edit Record';
                }
 
                $('.subject-edit-status').on('change', function () {
@@ -183,11 +91,11 @@
 
                $(data.form).parents('.ui-dialog').find('.ui-dialog-title').text(headerText);
 
-               $('#Edit-BirthdateCreate').datepicker({ dateFormat: 'dd-mm-yy', maxDate: 0 });
-               if (headerText == 'Add New Driver') {
-                   $("#Edit-BirthdateCreate").datepicker().datepicker("setDate", new Date());
+               //$('#Edit-BirthdateCreate').datepicker({ dateFormat: 'dd-mm-yy', maxDate: 0 });
+               //if (headerText == 'Add New Driver') {
+               //    $("#Edit-BirthdateCreate").datepicker().datepicker("setDate", new Date());
                    
-               }
+               //}
 
                 data.form.validationEngine();
                 
@@ -201,7 +109,7 @@
                 $(".formError").css('display', 'none');
                 // $('#UserTableContainer').jtable('load', { Id: indexId });
             },
-            addRecordButton: $('#addrecord-driverTableContainer')
+            addRecordButton: $('#addrecord-pumpTableContainer')
 
         });
 
@@ -209,11 +117,11 @@
 
         indexId = $('#hdnAccountHolderSignup').val();
         var AccountwithUser = "{'searchWord':'" + searchword + "'," + " 'AccountHolderId':' " + indexId + "'}";
-        $('#DriverTableContainer').jtable('load', { Id: AccountwithUser });
+        $('#PumpTableContainer').jtable('load', { Id: AccountwithUser });
 
 
         //////////////////////User Search box Loads jtable on key up//////////////////////////////////
-        $("#txtAutoCompletedrivers").keyup(function () {
+        $("#txtAutoCompletepumps").keyup(function () {
             searchword = $(this).val();
 
 
@@ -229,8 +137,8 @@
 
         function TxtAutoComplete() {
             var AccountwithUser = "{'searchWord':'" + searchword + "'," + " 'AccountHolderId':' " + indexId + "'}";
-            $('#DriverTableContainer').jtable('load', { Id: AccountwithUser });
-            $('#txtAutoCompletedrivers').focus();
+            $('#PumpTableContainer').jtable('load', { Id: AccountwithUser });
+            $('#txtAutoCompletepumps').focus();
         }
         //////////////////////Account Holder Search box Loads jtable on clear//////////////////////////////////
         $("#txtBoxAutoComplete").on('keyup', function () {
@@ -250,11 +158,11 @@
             }
         });
         //////////////////////
-        if (indexId == '' || indexId == 0) { $('#addrecord-driverTableContainer').show(); }
+        if (indexId === '' || indexId === 0) { $('#addrecord-pumpTableContainer').show(); }
 
 
         $("#txtBoxAutoComplete").on('focus mouseup', function () {
-            if ($.trim($(this).val() == '')) {
+            if ($.trim($(this).val() === '')) {
                 $(this).autocomplete("search", "*");
             } else {
                 $(this).autocomplete("search", $(this).val());
@@ -275,7 +183,7 @@
            // $("#helpTooltip").click(function () { alert("call"); });
 
             $(window).keydown(function (event) {
-                if (event.keyCode == 13) {
+                if (event.keyCode === 13) {
                     event.preventDefault();
                     return false;
                 }

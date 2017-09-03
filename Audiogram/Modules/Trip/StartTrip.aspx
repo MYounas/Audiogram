@@ -1,7 +1,7 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Audiogram.Master" EnableEventValidation="false" AutoEventWireup="true" CodeBehind="StartTrip.aspx.cs" Inherits="Audiogram.Modules.Trips.StartTrip" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Audiogram.Master" EnableEventValidation="false" AutoEventWireup="true" CodeBehind="StartTrip.aspx.cs" Inherits="Audiogram.Modules.Trip.StartTrip" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
-
+<%--<%@ Register Src="~/Modules/Trip/AddBuilty.ascx" TagPrefix="uc1" TagName="AddBuilty" %>--%>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="Server">
 
@@ -60,8 +60,9 @@
                                                 <!-- Nav tabs -->
                                                 <ul class="nav nav-tabs" role="tablist">
                                                     <li class="active"><a href="#basic" aria-controls="basic" role="tab" data-toggle="tab">Basic</a></li>
-                                                    <li><a href="#expenses" aria-controls="expensis" role="tab" data-toggle="tab">Expenses</a></li>
-                                                    <li><a href="#settlement" aria-controls="settlement" role="tab" data-toggle="tab">Settlement</a></li>
+                                                    <%--<li><a href="#expenses" aria-controls="expensis" role="tab" data-toggle="tab">Expenses</a></li>
+                                                    <li><a href="#settlement" aria-controls="settlement" role="tab" data-toggle="tab">Settlement</a></li>--%>
+                                                    <li><a href="#builty" aria-controls="builty" role="tab" data-toggle="tab">Builty</a></li>
                                                 </ul>
                                                 <!-- Tab panes -->
                                                 <div class="tab-content" style="padding-top: 20px">
@@ -91,17 +92,6 @@
                                                                     </div>
                                                                 </div>
 
-                                                                <%--           <div class="form-group col-xs-12">
-                                                            <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Starting Balance:</label>
-                                                            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
-                                                                <div class="numbers-row">
-                                                                    <div class="input-group spinner">
-                                                                        <input type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" name="txtMinNoOfTones" runat="server" id="Text1" value="0" />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>--%>
-
                                                                 <div class="form-group col-xs-12">
                                                                     <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Start Date:</label>
                                                                     <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
@@ -120,7 +110,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <div role="tabpanel" class="tab-pane" id="expenses">
+<%--                                                    <div role="tabpanel" class="tab-pane" id="expenses">
                                                         <asp:Panel ID="pnlexpenes" runat="server">
 
                                                             <div class="row">
@@ -277,6 +267,70 @@
 
                                                                 </div>
                                                             </div>
+                                                        </asp:Panel>
+                                                    </div>--%>
+
+
+                                                        <div role="tabpanel" class="tab-pane" id="builty">
+                                                        <asp:Panel ID="pnlexpenes" runat="server">
+
+                                                            <div class="row">
+                                                                <div class="row">
+                                                                    <div class="form-horizontal col-lg-12">
+
+                                                                        <div class="form-group col-xs-12">
+                                                                            <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Client:</label>
+                                                                            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                                                <asp:TextBox type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" runat="server" ID="txtClient" value="0" />
+                                                                            </div>
+                                                                            <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Station:</label>
+                                                                            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                                                <asp:TextBox type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" runat="server" ID="txtStation" value="0" />
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="form-group col-xs-12">
+                                                                            <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Destination:</label>
+                                                                            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                                                <asp:TextBox type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" runat="server" ID="txtDestination" value="0" />
+                                                                            </div>
+                                                                            <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Quantity:</label>
+                                                                            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                                                <asp:TextBox type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" runat="server" ID="txtQuantity" value="0" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group col-xs-12">
+                                                                            <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Scale:</label>
+                                                                            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                                                <asp:TextBox type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" runat="server" ID="txtScale" value="0" />
+                                                                            </div>
+                                                                            <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Freight:</label>
+                                                                            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                                                <asp:TextBox type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" runat="server" ID="txtFreight" value="0" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group col-xs-12">
+                                                                            <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Paid Or Not:</label>
+                                                                            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                                                <%--<asp:RadioButton ID="txtpaidOrNot" runat="server"   data-step="1" onkeypress="return validateInt(event,this)" class="form-control with-icon col-xs-10 text-left-f" />--%>
+                                                                                <asp:RadioButtonList RepeatDirection="Horizontal" ID="radiopaidOrNot" runat="server" data-step="1" onkeypress="return validateInt(event,this)" class="with-icon col-xs-10 text-left-f">
+                                                                                    <asp:ListItem Text="Paid" Value="paid"></asp:ListItem>
+                                                                                    <asp:ListItem Text="Not Paid" Value="not_paid"></asp:ListItem>
+                                                                                </asp:RadioButtonList>
+                                                                                <%--<asp:TextBox type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" runat="server" ID="txtGodown" value="0" />--%>
+                                                                            </div>
+                                                                            <%--<label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Tyre:</label>
+                                                                            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                                                <asp:TextBox type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" runat="server" ID="txtTyre" value="0" />
+                                                                            </div>--%>
+                                                                        </div>
+                                                                        
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+
                                                         </asp:Panel>
                                                     </div>
 

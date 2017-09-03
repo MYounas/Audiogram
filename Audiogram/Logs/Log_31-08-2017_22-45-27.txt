@@ -1,0 +1,141 @@
+2017-08-31 22:45:27,347 INFO  Page Load of Login
+2017-08-31 22:45:29,658 INFO  Page Load of Login
+2017-08-31 22:45:30,332 INFO  Page Load of Master
+2017-08-31 22:45:32,596 INFO  Page Load of Master
+2017-08-31 22:47:21,263 ERROR    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Audiogram.DataAccess.OilRepository.CreateOil(Oil addedRecord) in C:\Users\user\Desktop\Audiogram\Audiogram.DataAccess\DataAccess\OilRepository.cs:line 104
+2017-08-31 22:48:41,989 ERROR    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Audiogram.DataAccess.OilRepository.CreateOil(Oil addedRecord) in C:\Users\user\Desktop\Audiogram\Audiogram.DataAccess\DataAccess\OilRepository.cs:line 104
+2017-08-31 22:49:12,787 ERROR    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at Audiogram.DataAccess.OilRepository.DeleteOil(Int32 Id) in C:\Users\user\Desktop\Audiogram\Audiogram.DataAccess\DataAccess\OilRepository.cs:line 198
+2017-08-31 22:50:18,077 INFO  Page Load of Login
+2017-08-31 22:50:19,787 INFO  Page Load of Login
+2017-08-31 22:50:19,802 INFO  Page Load of Master
+2017-08-31 22:50:21,754 INFO  Page Load of Master
+2017-08-31 23:17:31,735 INFO  Page Load of Login
+2017-08-31 23:17:33,463 INFO  Page Load of Login
+2017-08-31 23:17:33,480 INFO  Page Load of Master
+2017-08-31 23:17:35,743 INFO  Page Load of Master
+2017-09-01 04:08:17,427 INFO  Page Load of Login
+2017-09-01 04:08:32,620 INFO  Page Load of Login
+2017-09-01 04:08:32,689 INFO  Page Load of Master
+2017-09-01 04:08:35,390 INFO  Page Load of Master
+2017-09-01 04:08:38,936 INFO  Page Load of Master
+2017-09-01 04:08:39,014 INFO  Page Load of Master
+2017-09-01 04:08:43,642 INFO  Page Load of Master
+2017-09-01 04:10:32,535 INFO  Page Load of Master
+2017-09-01 04:10:32,572 INFO  Page Load of Master
+2017-09-01 04:13:03,992 INFO  Page Load of Master
+2017-09-01 04:13:06,815 INFO  Page Load of Master
+2017-09-01 04:13:50,753 INFO  Page Load of Master
+2017-09-01 04:15:12,701 INFO  Page Load of Login
+2017-09-01 04:15:18,508 INFO  Page Load of Login
+2017-09-01 04:15:18,538 INFO  Page Load of Master
+2017-09-01 04:15:21,252 INFO  Page Load of Master
+2017-09-01 04:15:58,120 INFO  Page Load of Master
+2017-09-01 04:16:58,241 INFO  Page Load of Master
+2017-09-01 04:17:12,697 INFO  Page Load of Master
+2017-09-01 04:17:22,163 INFO  Page Load of Master
+2017-09-01 04:17:46,588 INFO  Page Load of Master
+2017-09-01 04:18:50,728 INFO  Page Load of Master
+2017-09-01 04:21:34,515 INFO  Page Load of Master
+2017-09-01 04:24:10,392 INFO  Page Load of Master
+2017-09-01 04:24:31,355 INFO  Page Load of Master
+2017-09-01 04:24:48,547 INFO  Page Load of Master
+2017-09-01 04:25:04,069 INFO  Page Load of Master
+2017-09-01 04:25:32,172 INFO  Page Load of Master
+2017-09-01 04:25:33,584 INFO  Page Load of Master
+2017-09-01 04:32:29,156 INFO  Page Load of Master
+2017-09-01 04:32:30,577 INFO  Page Load of Master
+2017-09-01 04:32:30,614 INFO  Page Load of Master
+2017-09-01 05:10:25,591 INFO  Page Load of Login
+2017-09-01 05:10:27,614 INFO  Page Load of Login
+2017-09-01 05:10:27,667 INFO  Page Load of Master
+2017-09-01 05:10:29,788 INFO  Page Load of Master
+2017-09-01 05:10:34,997 INFO  Page Load of Master
+2017-09-01 05:12:02,755 INFO  Page Load of Master
+2017-09-01 05:12:04,502 INFO  Page Load of Master
+2017-09-01 05:12:04,545 INFO  Page Load of Master
+2017-09-01 05:20:10,899 INFO  Page Load of Master
+2017-09-01 05:20:14,953 INFO  Page Load of Master
+2017-09-01 05:20:15,451 INFO  Page Load of Master
+2017-09-01 05:20:21,006 INFO  Page Load of Master
+2017-09-01 05:20:21,051 INFO  Page Load of Master
+2017-09-01 05:21:18,677 INFO  Page Load of Master
+2017-09-01 05:21:20,402 INFO  Page Load of Master
+2017-09-01 05:21:20,942 INFO  Page Load of Master
+2017-09-01 05:21:23,622 INFO  Page Load of Master
+2017-09-01 05:21:23,669 INFO  Page Load of Master
+2017-09-01 05:21:33,289 INFO  Page Load of Master
+2017-09-01 05:21:35,490 INFO  Page Load of Master
+2017-09-01 05:21:35,541 INFO  Page Load of Master
+2017-09-01 05:22:48,847 INFO  Page Load of Master
+2017-09-01 05:22:51,726 INFO  Page Load of Master
+2017-09-01 05:22:53,569 INFO  Page Load of Master
+2017-09-01 05:22:53,607 INFO  Page Load of Master
+2017-09-01 05:22:55,333 INFO  Page Load of Master
+2017-09-01 05:22:57,051 INFO  Page Load of Master
+2017-09-01 05:22:57,577 INFO  Page Load of Master
+2017-09-01 05:23:17,625 ERROR error:Sequence contains no elements
+2017-09-01 05:23:37,715 ERROR error:Sequence contains no elements
+2017-09-01 05:24:23,744 INFO  Page Load of Login
+2017-09-01 05:24:26,600 INFO  Page Load of Login
+2017-09-01 05:24:26,615 INFO  Page Load of Master
+2017-09-01 05:24:29,390 INFO  Page Load of Master
+2017-09-01 08:32:28,941 INFO  Page Load of Login
+2017-09-01 08:32:30,532 INFO  Page Load of Login
+2017-09-01 08:32:30,669 INFO  Page Load of Master
+2017-09-01 08:32:32,879 INFO  Page Load of Master
+2017-09-01 08:32:36,259 ERROR error:Sequence contains no elements
+2017-09-01 08:32:36,259 INFO  Page Load of Master
+2017-09-01 08:32:36,737 INFO  Page Load of Master
+2017-09-01 08:33:22,076 ERROR error:Sequence contains no elements
+2017-09-01 08:33:22,076 INFO  Page Load of Master
+2017-09-01 08:33:22,554 INFO  Page Load of Master
+2017-09-01 08:47:07,101 INFO  Page Load of Master
+2017-09-01 08:47:07,204 INFO  Page Load of Master
+2017-09-01 08:47:11,225 INFO  Page Load of Master
+2017-09-01 09:01:06,584 INFO  Page Load of Master
+2017-09-01 09:07:46,086 INFO  Page Load of Master
+2017-09-01 09:07:46,596 INFO  Page Load of Master

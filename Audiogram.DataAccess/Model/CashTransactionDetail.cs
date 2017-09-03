@@ -28,6 +28,10 @@ namespace Audiogram.DataAccess.Model
 
         public string Remarks { get; set; }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 00040d4974a2d930000de265de705184fd565ab0
     }
 
 }
