@@ -14,7 +14,9 @@ namespace Audiogram.DataAccess.Model
         [DataType(DataType.Date)]
         public DateTime? Date { get; set; }
 
-        public string TrSource { get; set; }
+        public int SourceType { get; set; }
+
+        public int SourceValue { get; set; }
 
         public string TrDetail { get; set; }
 
