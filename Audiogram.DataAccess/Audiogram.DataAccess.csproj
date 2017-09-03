@@ -94,6 +94,7 @@
     <Compile Include="Logging.cs" />
     <Compile Include="Model\CashTransactionDetail.cs" />
     <Compile Include="Model\DiesalAndCashLoan.cs" />
+    <Compile Include="Model\DropDownItem.cs" />
     <Compile Include="Model\LubricantOil.cs" />
     <Compile Include="Model\Oil.cs" />
     <Compile Include="Model\Tire.cs" />
