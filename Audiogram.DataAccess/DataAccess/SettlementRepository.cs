@@ -61,6 +61,48 @@ namespace Audiogram.DataAccess
             }
         }
 
+        public static List<Settlement> getSettlementByTripID(int TripId)
+        {
+            var connection = DBConnection.GetConnection();
+
+            try
+            {
+                if (connection.State != ConnectionState.Open)
+                {
+                    connection.Open();
+                }
+
+                SqlCommand command = new SqlCommand("usp_getSettlementByTripID", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@TripId", TripId);
+                DataSet dataset = new DataSet();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter();
+                dataAdapter.SelectCommand = command;
+                dataAdapter.Fill(dataset);
+                Mapper.CreateMap<IDataReader, Settlement>();
+                IDataReader dataReader = command.ExecuteReader();
+                List<Settlement> lstSettlements = Mapper.Map<List<Settlement>>(dataReader);
+
+                return lstSettlements;
+
+            }
+            catch (Exception ex)
+            {
+                //Logger.logging.log.Error("error:" + ex.Message);
+                //return new { Result = "ERROR", Message = "Could not connect to database. Please contact the System Administrator." };
+                return null;
+            }
+
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+
         public static object CreateSettlement(Settlement addedRecord)
         {
 

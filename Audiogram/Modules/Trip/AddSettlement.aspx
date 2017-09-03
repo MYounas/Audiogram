@@ -74,9 +74,69 @@
                                             <div id="addrecord-AddSettlementContainer" class="btn btn-primary addrecord-btn margin-top-5" title="Click on this button to add a new Record">Add New Settlement</div>
                                         </div>
 
-                                        <div class="jtable-wrap">
+                                        <%--<div class="jtable-wrap">
                                             <table id="AddSettlementContainer" class="AddSettlementContainer full-width" style="height: auto;">
                                             </table>
+                                        </div>--%>
+
+                                        <div class="row">
+                                            <div class="form-horizontal col-lg-12">
+
+                                                <div class="form-group col-xs-12">
+                                                    <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Previous Peshgi:</label>
+                                                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                        <asp:TextBox type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" runat="server" ID="txtPreviousPeshgi" value="0" />
+                                                    </div>
+                                                    <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Cash Adv/Deposit:</label>
+                                                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                        <asp:TextBox type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" runat="server" ID="txtCashAdvDeposit" value="0" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group col-xs-12">
+                                                    <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Purchoon Frieght Up:</label>
+                                                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                        <asp:TextBox type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" runat="server" ID="txtPurchoonFrieghtUp" value="0" />
+                                                    </div>
+                                                    <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Purchoon Frieght Return:</label>
+                                                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                        <asp:TextBox type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" runat="server" ID="txtPurchoonFrightReturn" value="0" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-xs-12">
+                                                    <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Pump Cash LOan:</label>
+                                                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                        <asp:TextBox type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" runat="server" ID="txtPumpCashLoan" value="0" />
+                                                    </div>
+                                                    <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Misc Cash Loan:</label>
+                                                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                        <asp:TextBox type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" runat="server" ID="txtMiscCashLoan" value="0" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-xs-12">
+                                                    <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Misc 1:</label>
+                                                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                        <asp:TextBox type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" runat="server" ID="txtSetMisc1" value="0" />
+                                                    </div>
+                                                    <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Misc 2:</label>
+                                                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                        <asp:TextBox type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" runat="server" ID="txtSetMisc2" value="0" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-xs-12">
+                                                    <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Misc 3:</label>
+                                                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                        <asp:TextBox type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" runat="server" ID="txtSetMisc3" value="0" />
+                                                    </div>
+                                                    <label class="control-label col-xs-12 col-sm-2 col-lg-2 text-left-f NoWrap--">Misc 4:</label>
+                                                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 newTestFormwidth--">
+                                                        <asp:TextBox type="text" data-step="1" onkeypress="return validateInt(event,this)" data-allowdecimal="false" class="form-control with-icon col-xs-10 text-left-f" runat="server" ID="txtSetMisc4" value="0" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group clear text-left inline-block">
+                                                <asp:Button ID="btnStart" runat="server" type="submit" class="btn btn-primary" Text="Save" OnClick="btnStartTest_Click" ClientIDMode="Static" Style="width: 200px !important; margin-left: 10px;"></asp:Button>
+                                            </div>
                                         </div>
 
                                     </fieldset>
